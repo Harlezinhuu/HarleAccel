@@ -1,0 +1,1674 @@
+{
+  "Version": 1,
+  "Updated": "2026-11-24",
+  "Routines": [
+    {
+      "Id": "aimlab-iniciante-flicker",
+      "Platform": "Aim Lab",
+      "Level": "Iniciante",
+      "Style": "Flicker",
+      "Title": "Adapta\u00E7\u00E3o Flicker \u00B7 Iniciante",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Bronze).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "VT Centering 90 Easy No Strafes",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Smoothpill Bronze",
+          "Minutes": 4,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Minisphere Vertical Bronze",
+          "Minutes": 4,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Kindaclose Fast Strafes Bronze",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Air Close Long Strafes Bronze",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT mpXY Bronze",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT A90 Bronze",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT ww3t TE",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT 1w4ts 30% larger",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT A90T Bronze",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT pillTS 90 Static Easy",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "VT MPspeed 2bp Bronze",
+          "Minutes": 2,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "aimlab-iniciante-tracker",
+      "Platform": "Aim Lab",
+      "Level": "Iniciante",
+      "Style": "Tracker",
+      "Title": "Adapta\u00E7\u00E3o Tracker \u00B7 Iniciante",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Bronze).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "VT Centering 90 Easy No Strafes",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT mpXY Bronze",
+          "Minutes": 4,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT A90 Bronze",
+          "Minutes": 4,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT ww3t TE",
+          "Minutes": 4,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT 1w4ts 30% larger",
+          "Minutes": 4,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT A90T Bronze",
+          "Minutes": 3,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT pillTS 90 Static Easy",
+          "Minutes": 3,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Smoothpill Bronze",
+          "Minutes": 2,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Minisphere Vertical Bronze",
+          "Minutes": 2,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Kindaclose Fast Strafes Bronze",
+          "Minutes": 2,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Air Close Long Strafes Bronze",
+          "Minutes": 2,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "VT MPspeed 2bp Bronze",
+          "Minutes": 2,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "aimlab-iniciante-h\u00EDbrido",
+      "Platform": "Aim Lab",
+      "Level": "Iniciante",
+      "Style": "H\u00EDbrido",
+      "Title": "Adapta\u00E7\u00E3o H\u00EDbrido \u00B7 Iniciante",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Bronze).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "VT Centering 90 Easy No Strafes",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Smoothpill Bronze",
+          "Minutes": 3,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Minisphere Vertical Bronze",
+          "Minutes": 3,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Kindaclose Fast Strafes Bronze",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Air Close Long Strafes Bronze",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT mpXY Bronze",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT A90 Bronze",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT ww3t TE",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT 1w4ts 30% larger",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT A90T Bronze",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT pillTS 90 Static Easy",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "VT MPspeed 2bp Bronze",
+          "Minutes": 4,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "aimlab-iniciante-voltaic",
+      "Platform": "Aim Lab",
+      "Level": "Iniciante",
+      "Style": "Completa",
+      "Title": "Rotina completa Voltaic Bronze (65 min)",
+      "Description": "A rotina fundamental original do Voltaic, para quem quer um treino geral e longo.",
+      "Credit": "Voltaic (voltaic.gg)",
+      "ShareCode": null,
+      "Link": "https://tiny.one/ALbronze",
+      "Blocks": [
+        {
+          "Category": "Rotina completa",
+          "Scenario": "Abra o link da playlist no Aim Lab",
+          "Minutes": 65,
+          "Focus": "Siga a ordem da playlist."
+        }
+      ],
+      "Minutes": 65
+    },
+    {
+      "Id": "aimlab-intermedi\u00E1rio-flicker",
+      "Platform": "Aim Lab",
+      "Level": "Intermedi\u00E1rio",
+      "Style": "Flicker",
+      "Title": "Adapta\u00E7\u00E3o Flicker \u00B7 Intermedi\u00E1rio",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Gold).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "VT Thinbot Raspberry Gold",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Smoothpill Gold",
+          "Minutes": 4,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Minisphere Gold",
+          "Minutes": 4,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Kindaclose Fast Strafes",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Air AIO Gold",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT mpXY Gold",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT Popcorn Gold",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT ww3t smaller",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "1w4ts Voltaic",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT A180T Gold",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT pillTS Gold",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "VT MPspeed 2bp Gold",
+          "Minutes": 2,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "aimlab-intermedi\u00E1rio-tracker",
+      "Platform": "Aim Lab",
+      "Level": "Intermedi\u00E1rio",
+      "Style": "Tracker",
+      "Title": "Adapta\u00E7\u00E3o Tracker \u00B7 Intermedi\u00E1rio",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Gold).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "VT Thinbot Raspberry Gold",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT mpXY Gold",
+          "Minutes": 4,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT Popcorn Gold",
+          "Minutes": 4,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT ww3t smaller",
+          "Minutes": 4,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "1w4ts Voltaic",
+          "Minutes": 4,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT A180T Gold",
+          "Minutes": 3,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT pillTS Gold",
+          "Minutes": 3,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Smoothpill Gold",
+          "Minutes": 2,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Minisphere Gold",
+          "Minutes": 2,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Kindaclose Fast Strafes",
+          "Minutes": 2,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Air AIO Gold",
+          "Minutes": 2,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "VT MPspeed 2bp Gold",
+          "Minutes": 2,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "aimlab-intermedi\u00E1rio-h\u00EDbrido",
+      "Platform": "Aim Lab",
+      "Level": "Intermedi\u00E1rio",
+      "Style": "H\u00EDbrido",
+      "Title": "Adapta\u00E7\u00E3o H\u00EDbrido \u00B7 Intermedi\u00E1rio",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Gold).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "VT Thinbot Raspberry Gold",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Smoothpill Gold",
+          "Minutes": 3,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Minisphere Gold",
+          "Minutes": 3,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Kindaclose Fast Strafes",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Air AIO Gold",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT mpXY Gold",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT Popcorn Gold",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT ww3t smaller",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "1w4ts Voltaic",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT A180T Gold",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT pillTS Gold",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "VT MPspeed 2bp Gold",
+          "Minutes": 4,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "aimlab-intermedi\u00E1rio-voltaic",
+      "Platform": "Aim Lab",
+      "Level": "Intermedi\u00E1rio",
+      "Style": "Completa",
+      "Title": "Rotina completa Voltaic Gold (65 min)",
+      "Description": "A rotina fundamental original do Voltaic, para quem quer um treino geral e longo.",
+      "Credit": "Voltaic (voltaic.gg)",
+      "ShareCode": null,
+      "Link": "https://tiny.one/ALgold",
+      "Blocks": [
+        {
+          "Category": "Rotina completa",
+          "Scenario": "Abra o link da playlist no Aim Lab",
+          "Minutes": 65,
+          "Focus": "Siga a ordem da playlist."
+        }
+      ],
+      "Minutes": 65
+    },
+    {
+      "Id": "aimlab-avan\u00E7ado-flicker",
+      "Platform": "Aim Lab",
+      "Level": "Avan\u00E7ado",
+      "Style": "Flicker",
+      "Title": "Adapta\u00E7\u00E3o Flicker \u00B7 Avan\u00E7ado",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Platinum).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "VT Thin Gauntlet",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Smoothsphere Easy",
+          "Minutes": 4,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Controlsphere Platinum",
+          "Minutes": 4,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Close Fast Strafes Invincible",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Air AIO Easy",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "mpXY Voltaic Easy",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT Popcorn Platinum",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT ww4ts",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT 1w4ts clusters",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT A360T Easy",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT pillTS 360 Easy",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "VT MPspeed 2bp",
+          "Minutes": 2,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "aimlab-avan\u00E7ado-tracker",
+      "Platform": "Aim Lab",
+      "Level": "Avan\u00E7ado",
+      "Style": "Tracker",
+      "Title": "Adapta\u00E7\u00E3o Tracker \u00B7 Avan\u00E7ado",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Platinum).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "VT Thin Gauntlet",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "mpXY Voltaic Easy",
+          "Minutes": 4,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT Popcorn Platinum",
+          "Minutes": 4,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT ww4ts",
+          "Minutes": 4,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT 1w4ts clusters",
+          "Minutes": 4,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT A360T Easy",
+          "Minutes": 3,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT pillTS 360 Easy",
+          "Minutes": 3,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Smoothsphere Easy",
+          "Minutes": 2,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Controlsphere Platinum",
+          "Minutes": 2,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Close Fast Strafes Invincible",
+          "Minutes": 2,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Air AIO Easy",
+          "Minutes": 2,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "VT MPspeed 2bp",
+          "Minutes": 2,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "aimlab-avan\u00E7ado-h\u00EDbrido",
+      "Platform": "Aim Lab",
+      "Level": "Avan\u00E7ado",
+      "Style": "H\u00EDbrido",
+      "Title": "Adapta\u00E7\u00E3o H\u00EDbrido \u00B7 Avan\u00E7ado",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Platinum).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "VT Thin Gauntlet",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Smoothsphere Easy",
+          "Minutes": 3,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "VT Controlsphere Platinum",
+          "Minutes": 3,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Close Fast Strafes Invincible",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "VT Air AIO Easy",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "mpXY Voltaic Easy",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "VT Popcorn Platinum",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT ww4ts",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "VT 1w4ts clusters",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT A360T Easy",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "VT pillTS 360 Easy",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "VT MPspeed 2bp",
+          "Minutes": 4,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "aimlab-avan\u00E7ado-voltaic",
+      "Platform": "Aim Lab",
+      "Level": "Avan\u00E7ado",
+      "Style": "Completa",
+      "Title": "Rotina completa Voltaic Platinum (65 min)",
+      "Description": "A rotina fundamental original do Voltaic, para quem quer um treino geral e longo.",
+      "Credit": "Voltaic (voltaic.gg)",
+      "ShareCode": null,
+      "Link": "https://tiny.one/ALplatinum",
+      "Blocks": [
+        {
+          "Category": "Rotina completa",
+          "Scenario": "Abra o link da playlist no Aim Lab",
+          "Minutes": 65,
+          "Focus": "Siga a ordem da playlist."
+        }
+      ],
+      "Minutes": 65
+    },
+    {
+      "Id": "kovaaks-iniciante-flicker",
+      "Platform": "KovaaK\u0027s",
+      "Level": "Iniciante",
+      "Style": "Flicker",
+      "Title": "Adapta\u00E7\u00E3o Flicker \u00B7 Iniciante",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Bronze).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "Centering 90 Easy No Strafes",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "Smoothbot Bronze",
+          "Minutes": 4,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "PGTI Vertical Bronze",
+          "Minutes": 4,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Kindaclose Fast Strafes Bronze",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Air Voltaic Close Long Strafes Easy",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Pasu Voltaic Bronze",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "B90 Voltaic Bronze",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "ww3t Voltaic Larger",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "1w4ts 30% larger",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "B90T Voltaic Easy Slow",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "patTS Voltaic Bronze",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "Tamspeed 2bp Bronze",
+          "Minutes": 2,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "kovaaks-iniciante-tracker",
+      "Platform": "KovaaK\u0027s",
+      "Level": "Iniciante",
+      "Style": "Tracker",
+      "Title": "Adapta\u00E7\u00E3o Tracker \u00B7 Iniciante",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Bronze).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "Centering 90 Easy No Strafes",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Pasu Voltaic Bronze",
+          "Minutes": 4,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "B90 Voltaic Bronze",
+          "Minutes": 4,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "ww3t Voltaic Larger",
+          "Minutes": 4,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "1w4ts 30% larger",
+          "Minutes": 4,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "B90T Voltaic Easy Slow",
+          "Minutes": 3,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "patTS Voltaic Bronze",
+          "Minutes": 3,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "Smoothbot Bronze",
+          "Minutes": 2,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "PGTI Vertical Bronze",
+          "Minutes": 2,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Kindaclose Fast Strafes Bronze",
+          "Minutes": 2,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Air Voltaic Close Long Strafes Easy",
+          "Minutes": 2,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "Tamspeed 2bp Bronze",
+          "Minutes": 2,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "kovaaks-iniciante-h\u00EDbrido",
+      "Platform": "KovaaK\u0027s",
+      "Level": "Iniciante",
+      "Style": "H\u00EDbrido",
+      "Title": "Adapta\u00E7\u00E3o H\u00EDbrido \u00B7 Iniciante",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Bronze).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "Centering 90 Easy No Strafes",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "Smoothbot Bronze",
+          "Minutes": 3,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "PGTI Vertical Bronze",
+          "Minutes": 3,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Kindaclose Fast Strafes Bronze",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Air Voltaic Close Long Strafes Easy",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Pasu Voltaic Bronze",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "B90 Voltaic Bronze",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "ww3t Voltaic Larger",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "1w4ts 30% larger",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "B90T Voltaic Easy Slow",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "patTS Voltaic Bronze",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "Tamspeed 2bp Bronze",
+          "Minutes": 4,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "kovaaks-iniciante-voltaic",
+      "Platform": "KovaaK\u0027s",
+      "Level": "Iniciante",
+      "Style": "Completa",
+      "Title": "Rotina completa Voltaic Bronze (65 min)",
+      "Description": "A rotina fundamental original do Voltaic, para quem quer um treino geral e longo.",
+      "Credit": "Voltaic (voltaic.gg)",
+      "ShareCode": "KOVAAKSFLANKINGGREENPISTOL",
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Rotina completa",
+          "Scenario": "Cole o c\u00F3digo KOVAAKSFLANKINGGREENPISTOL na aba Online Playlist",
+          "Minutes": 65,
+          "Focus": "Siga a ordem da playlist."
+        }
+      ],
+      "Minutes": 65
+    },
+    {
+      "Id": "kovaaks-intermedi\u00E1rio-flicker",
+      "Platform": "KovaaK\u0027s",
+      "Level": "Intermedi\u00E1rio",
+      "Style": "Flicker",
+      "Title": "Adapta\u00E7\u00E3o Flicker \u00B7 Intermedi\u00E1rio",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Gold).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "Thin Gauntlet Gold",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "Smoothbot Voltaic Easy",
+          "Minutes": 4,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "PGTI Voltaic Gold",
+          "Minutes": 4,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Kindaclose Fast Strafes",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Air Voltaic Easy",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Pasu Voltaic Easy",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Popcorn Voltaic Easy",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "ww3t Voltaic Smaller",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "1w4ts Voltaic",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "B180T Voltaic Easy",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "patTS Voltaic Easy",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "Tamspeed 2bp Gold",
+          "Minutes": 2,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "kovaaks-intermedi\u00E1rio-tracker",
+      "Platform": "KovaaK\u0027s",
+      "Level": "Intermedi\u00E1rio",
+      "Style": "Tracker",
+      "Title": "Adapta\u00E7\u00E3o Tracker \u00B7 Intermedi\u00E1rio",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Gold).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "Thin Gauntlet Gold",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Pasu Voltaic Easy",
+          "Minutes": 4,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Popcorn Voltaic Easy",
+          "Minutes": 4,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "ww3t Voltaic Smaller",
+          "Minutes": 4,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "1w4ts Voltaic",
+          "Minutes": 4,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "B180T Voltaic Easy",
+          "Minutes": 3,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "patTS Voltaic Easy",
+          "Minutes": 3,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "Smoothbot Voltaic Easy",
+          "Minutes": 2,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "PGTI Voltaic Gold",
+          "Minutes": 2,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Kindaclose Fast Strafes",
+          "Minutes": 2,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Air Voltaic Easy",
+          "Minutes": 2,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "Tamspeed 2bp Gold",
+          "Minutes": 2,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "kovaaks-intermedi\u00E1rio-h\u00EDbrido",
+      "Platform": "KovaaK\u0027s",
+      "Level": "Intermedi\u00E1rio",
+      "Style": "H\u00EDbrido",
+      "Title": "Adapta\u00E7\u00E3o H\u00EDbrido \u00B7 Intermedi\u00E1rio",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Gold).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "Thin Gauntlet Gold",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "Smoothbot Voltaic Easy",
+          "Minutes": 3,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "PGTI Voltaic Gold",
+          "Minutes": 3,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Kindaclose Fast Strafes",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Air Voltaic Easy",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Pasu Voltaic Easy",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Popcorn Voltaic Easy",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "ww3t Voltaic Smaller",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "1w4ts Voltaic",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "B180T Voltaic Easy",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "patTS Voltaic Easy",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "Tamspeed 2bp Gold",
+          "Minutes": 4,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "kovaaks-intermedi\u00E1rio-voltaic",
+      "Platform": "KovaaK\u0027s",
+      "Level": "Intermedi\u00E1rio",
+      "Style": "Completa",
+      "Title": "Rotina completa Voltaic Gold (65 min)",
+      "Description": "A rotina fundamental original do Voltaic, para quem quer um treino geral e longo.",
+      "Credit": "Voltaic (voltaic.gg)",
+      "ShareCode": "KOVAAKSFLICKINGHORIZONTALCHAMPION",
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Rotina completa",
+          "Scenario": "Cole o c\u00F3digo KOVAAKSFLICKINGHORIZONTALCHAMPION na aba Online Playlist",
+          "Minutes": 65,
+          "Focus": "Siga a ordem da playlist."
+        }
+      ],
+      "Minutes": 65
+    },
+    {
+      "Id": "kovaaks-avan\u00E7ado-flicker",
+      "Platform": "KovaaK\u0027s",
+      "Level": "Avan\u00E7ado",
+      "Style": "Flicker",
+      "Title": "Adapta\u00E7\u00E3o Flicker \u00B7 Avan\u00E7ado",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Platinum).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "Thin Gauntlet V2",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "Smoothsphere Easy",
+          "Minutes": 4,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "Controlsphere Platinum",
+          "Minutes": 4,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Close Fast Strafes Invincible",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Air Voltaic AIO Easy",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Pasu Voltaic Intermediate",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Popcorn Voltaic Intermediate",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "Wide Wall 4 Targets Small",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "1w2ts reload smallflicks",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "B360T Voltaic Easy",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "patTS Voltaic 360 Easy",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "Tamspeed 2bp Platinum",
+          "Minutes": 2,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "kovaaks-avan\u00E7ado-tracker",
+      "Platform": "KovaaK\u0027s",
+      "Level": "Avan\u00E7ado",
+      "Style": "Tracker",
+      "Title": "Adapta\u00E7\u00E3o Tracker \u00B7 Avan\u00E7ado",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Platinum).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "Thin Gauntlet V2",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Pasu Voltaic Intermediate",
+          "Minutes": 4,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Popcorn Voltaic Intermediate",
+          "Minutes": 4,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "Wide Wall 4 Targets Small",
+          "Minutes": 4,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "1w2ts reload smallflicks",
+          "Minutes": 4,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "B360T Voltaic Easy",
+          "Minutes": 3,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "patTS Voltaic 360 Easy",
+          "Minutes": 3,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "Smoothsphere Easy",
+          "Minutes": 2,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "Controlsphere Platinum",
+          "Minutes": 2,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Close Fast Strafes Invincible",
+          "Minutes": 2,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Air Voltaic AIO Easy",
+          "Minutes": 2,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "Tamspeed 2bp Platinum",
+          "Minutes": 2,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "kovaaks-avan\u00E7ado-h\u00EDbrido",
+      "Platform": "KovaaK\u0027s",
+      "Level": "Avan\u00E7ado",
+      "Style": "H\u00EDbrido",
+      "Title": "Adapta\u00E7\u00E3o H\u00EDbrido \u00B7 Avan\u00E7ado",
+      "Description": "Rotina de 36 minutos para acostumar a m\u00E3o com a curva nova, com o foco no que o seu estilo mais precisa.",
+      "Credit": "Cen\u00E1rios das rotinas p\u00FAblicas do Voltaic (n\u00EDvel Platinum).",
+      "ShareCode": null,
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Aquecimento",
+          "Scenario": "Thin Gauntlet V2",
+          "Minutes": 4,
+          "Focus": "Devagar e sem pressa: s\u00F3 acordar a m\u00E3o com a curva nova."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "Smoothsphere Easy",
+          "Minutes": 3,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking suave",
+          "Scenario": "Controlsphere Platinum",
+          "Minutes": 3,
+          "Focus": "Mantenha a mira colada no alvo, sem trancos. \u00C9 aqui que a m\u00E3o aprende a parte lenta da curva."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Close Fast Strafes Invincible",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Tracking reativo",
+          "Scenario": "Air Voltaic AIO Easy",
+          "Minutes": 3,
+          "Focus": "Acompanhe as mudan\u00E7as de dire\u00E7\u00E3o. Reaja, n\u00E3o tente adivinhar."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Pasu Voltaic Intermediate",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Flick din\u00E2mico",
+          "Scenario": "Popcorn Voltaic Intermediate",
+          "Minutes": 3,
+          "Focus": "Flicks de dist\u00E2ncias variadas. Repare como a curva ajuda nos movimentos longos."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "Wide Wall 4 Targets Small",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Precis\u00E3o (est\u00E1tico)",
+          "Scenario": "1w2ts reload smallflicks",
+          "Minutes": 3,
+          "Focus": "Acertar vem antes da velocidade. Microajuste limpo no fim de cada flick."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "B360T Voltaic Easy",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Troca de alvo",
+          "Scenario": "patTS Voltaic 360 Easy",
+          "Minutes": 2,
+          "Focus": "Troque de alvo de forma fluida, sem parar o mouse entre um e outro."
+        },
+        {
+          "Category": "Velocidade",
+          "Scenario": "Tamspeed 2bp Platinum",
+          "Minutes": 4,
+          "Focus": "Agora sim, velocidade. Tente manter a precis\u00E3o acima de ~85%."
+        }
+      ],
+      "Minutes": 36
+    },
+    {
+      "Id": "kovaaks-avan\u00E7ado-voltaic",
+      "Platform": "KovaaK\u0027s",
+      "Level": "Avan\u00E7ado",
+      "Style": "Completa",
+      "Title": "Rotina completa Voltaic Platinum (65 min)",
+      "Description": "A rotina fundamental original do Voltaic, para quem quer um treino geral e longo.",
+      "Credit": "Voltaic (voltaic.gg)",
+      "ShareCode": "KOVAAKSGEARINGHORIZONTALWEAPONLEVEL",
+      "Link": null,
+      "Blocks": [
+        {
+          "Category": "Rotina completa",
+          "Scenario": "Cole o c\u00F3digo KOVAAKSGEARINGHORIZONTALWEAPONLEVEL na aba Online Playlist",
+          "Minutes": 65,
+          "Focus": "Siga a ordem da playlist."
+        }
+      ],
+      "Minutes": 65
+    }
+  ]
+}

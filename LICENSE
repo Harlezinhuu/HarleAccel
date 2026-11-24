@@ -1,0 +1,55 @@
+Licença do HarleAccel
+Copyright (c) 2026 Harle — https://github.com/Harlezinhuu/HarleAccel
+
+Este software e o seu código-fonte são disponibilizados sob as condições abaixo.
+Ao usar, copiar, modificar ou distribuir o HarleAccel, você concorda com elas.
+
+VOCÊ PODE:
+- Usar o HarleAccel livremente.
+- Estudar o código.
+- Modificar o código e criar versões melhoradas.
+- Redistribuir o HarleAccel ou as suas versões modificadas, gratuitamente.
+
+DESDE QUE, em qualquer cópia ou versão que você distribua:
+1. Mantenha todos os avisos de autoria e esta licença nos arquivos. Não remova os
+   cabeçalhos "Criado por Harle".
+2. Deixe claro e visível, para quem for usar, que a sua versão é baseada no
+   HarleAccel, criado por Harle, com um link para o repositório original
+   (https://github.com/Harlezinhuu/HarleAccel).
+3. Se você modificou o código, indique isso de forma visível (que é uma versão
+   modificada e, de preferência, o que mudou).
+
+VOCÊ NÃO PODE:
+- Apresentar o HarleAccel, modificado ou não, como se fosse uma criação original sua.
+- Remover, esconder ou enfraquecer os créditos a Harle.
+- Usar os nomes "HarleAccel" ou "Harle" para nomear ou promover a sua versão de um
+  jeito que dê a entender que é o projeto original ou que tem apoio de Harle. Dê outro
+  nome à sua versão e diga que ela é baseada no HarleAccel.
+- Vender o HarleAccel como um produto fechado e seu.
+
+SEM GARANTIA: o software é fornecido "COMO ESTÁ", sem garantia de qualquer tipo. O
+autor não se responsabiliza por quaisquer danos decorrentes do uso.
+
+Componentes de terceiros (como o driver do Raw Accel) seguem as suas próprias
+licenças; veja THIRD_PARTY_NOTICES.md.
+
+================================================================================
+
+HarleAccel License (English summary)
+Copyright (c) 2026 Harle — https://github.com/Harlezinhuu/HarleAccel
+
+You MAY use, study, modify and redistribute HarleAccel and modified versions, free
+of charge, PROVIDED THAT, in any copy or version you distribute, you: (1) keep all
+authorship notices and this license in the files (do not remove the "Criado por
+Harle" headers); (2) clearly and visibly state that your version is based on
+HarleAccel by Harle, with a link to the original repository; and (3) if you modified
+the code, clearly indicate that it is a modified version.
+
+You MAY NOT present HarleAccel (modified or not) as your own original creation;
+remove, hide or weaken the credits to Harle; use the names "HarleAccel" or "Harle"
+to name or promote your version in a way that implies it is the original project or
+is endorsed by Harle; or sell HarleAccel as a closed product of your own.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. Third-party
+components (such as the Raw Accel driver) keep their own licenses; see
+THIRD_PARTY_NOTICES.md.

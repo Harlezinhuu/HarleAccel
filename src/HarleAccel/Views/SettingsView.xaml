@@ -1,0 +1,84 @@
+<!-- HarleAccel — Criado por Harle. (c) 2026.
+     Pode modificar e redistribuir mantendo os creditos e deixando claro que e baseado no HarleAccel. Ver LICENSE.
+     https://github.com/Harlezinhuu/HarleAccel -->
+<UserControl x:Class="HarleAccel.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <StackPanel Margin="0,0,8,0">
+            <TextBlock Text="Configurações" Style="{StaticResource H1}"/>
+
+            <Border Style="{StaticResource CardBorder}" Margin="0,16,0,0">
+                <StackPanel>
+                    <TextBlock Text="Atualizações" Style="{StaticResource H2}"/>
+                    <CheckBox x:Name="UpdatesBox" Content="Avisar quando sair versão nova (confere o GitHub ao abrir)" Checked="Save_Changed" Unchecked="Save_Changed"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <Button Content="Procurar agora" Click="CheckNow_Click"/>
+                        <TextBlock x:Name="UpdateStatus" Margin="12,0,0,0" FontSize="12" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource CardBorder}" Margin="0,16,0,0">
+                <StackPanel>
+                    <TextBlock Text="Harle IA (Gemini)" Style="{StaticResource H2}"/>
+                    <TextBlock Style="{StaticResource Sub}" Margin="0,0,0,12" LineHeight="20">
+                        Sem chave, o Harle IA já converte sensibilidade e explica a sua curva. Com a chave grátis do Gemini ele entende perguntas livres e sugere ajustes.
+                        <LineBreak/>A chave fica criptografada neste PC (só o seu usuário do Windows consegue abrir) e só é enviada para o Google.
+                        <LineBreak/>É grátis: use uma chave do plano gratuito do Google AI Studio, sem cadastrar cartão. O HarleAccel nunca cobra nada; se o limite grátis acabar, o chat só pede para esperar.
+                        <LineBreak/>Atenção: no nível grátis, o Google pode usar as conversas para melhorar os produtos dele. O chat envia a sua mensagem e um resumo do seu setup (jogo, sens, DPI e curva).
+                    </TextBlock>
+                    <TextBlock Text="CHAVE DA API" Style="{StaticResource Label}"/>
+                    <StackPanel Orientation="Horizontal">
+                        <PasswordBox x:Name="GeminiKeyBox" Width="360"/>
+                        <Button Content="Salvar chave" Style="{StaticResource Primary}" Click="SaveKey_Click" Margin="8,0,0,0"/>
+                        <Button Content="Apagar" Style="{StaticResource Ghost}" Click="ClearKey_Click" Margin="4,0,0,0"/>
+                    </StackPanel>
+                    <TextBlock x:Name="KeyStatus" FontSize="12" Margin="0,6,0,10" TextWrapping="Wrap"/>
+                    <Button Content="Pegar chave grátis no Google AI Studio" HorizontalAlignment="Left" Click="AiStudio_Click" Margin="0,0,0,12"/>
+                    <TextBlock Text="MODELO" Style="{StaticResource Label}"/>
+                    <TextBox x:Name="GeminiModelBox" Width="360" HorizontalAlignment="Left" LostFocus="Save_Changed"/>
+                    <TextBlock Style="{StaticResource Sub}" FontSize="11" Margin="0,4,0,0"
+                               Text="Padrão: gemini-3.1-flash-lite (tem nível grátis). Se o Google trocar os modelos, coloque aqui o nome novo."/>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource CardBorder}" Margin="0,16,0,0">
+                <StackPanel>
+                    <TextBlock Text="Discord Rich Presence" Style="{StaticResource H2}"/>
+                    <TextBlock Style="{StaticResource Sub}" Margin="0,0,0,12" LineHeight="20">
+                        Mostra no seu perfil do Discord que você está usando o HarleAccel e qual curva.
+                        <LineBreak/>Precisa de um “Application ID”: crie um app chamado HarleAccel em discord.com/developers/applications,
+                        envie o logo em Rich Presence → Art Assets com o nome <Run FontWeight="SemiBold">logo</Run> e cole o ID aqui.
+                    </TextBlock>
+                    <CheckBox x:Name="DiscordBox" Content="Mostrar no Discord" Checked="Save_Changed" Unchecked="Save_Changed" Margin="0,0,0,10"/>
+                    <TextBlock Text="APPLICATION ID" Style="{StaticResource Label}"/>
+                    <TextBox x:Name="DiscordIdBox" MaxWidth="360" HorizontalAlignment="Left" Width="360" LostFocus="Save_Changed"/>
+                    <TextBlock x:Name="DiscordStatus" FontSize="12" Margin="0,8,0,0" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource CardBorder}" Margin="0,16,0,0">
+                <StackPanel>
+                    <TextBlock Text="Biblioteca de treinos" Style="{StaticResource H2}"/>
+                    <TextBlock Style="{StaticResource Sub}" Margin="0,0,0,10"
+                               Text="As rotinas são baixadas deste endereço ao abrir o app. Assim dá para atualizar as playlists sem lançar versão nova. Se não der para baixar, o app usa as rotinas que já vêm dentro dele."/>
+                    <TextBox x:Name="RoutinesUrlBox" LostFocus="Save_Changed"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <Button Content="Recarregar rotinas" Click="ReloadRoutines_Click"/>
+                        <Button Content="Exportar routines.json" Click="ExportRoutines_Click" Margin="8,0,0,0"/>
+                        <TextBlock x:Name="RoutinesStatus" Margin="12,0,0,0" FontSize="12" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource CardBorder}" Margin="0,16,0,0">
+                <StackPanel>
+                    <TextBlock Text="Dados" Style="{StaticResource H2}"/>
+                    <TextBlock x:Name="DataPath" Style="{StaticResource Sub}" Margin="0,0,0,10"/>
+                    <Button Content="Abrir pasta de dados" HorizontalAlignment="Left" Click="OpenData_Click"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
