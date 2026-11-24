@@ -64,7 +64,7 @@ jobs:
 
       - name: Criar a release (ou anexar o .exe numa que já existe)
         if: steps.rel.outputs.tag != ''
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ steps.rel.outputs.tag }}
           name: HarleAccel ${{ steps.rel.outputs.tag }}
