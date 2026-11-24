@@ -3,6 +3,8 @@ name: Build
 on:
   push:
     branches: [ main ]
+    # enviar uma tag (ex.: 0.4.1) cria a release com o .exe
+    tags: [ '*' ]
   pull_request:
   # quando você publica uma release pelo site do GitHub (com qualquer nome de tag, com ou sem "v")
   release:
@@ -51,9 +53,20 @@ jobs:
           name: HarleAccel
           path: out/HarleAccel.exe
 
-      - name: Anexar o .exe na release
-        if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.tag != '')
+      - name: Ver se é uma versão (tag) e se tem notas em docs/releases
+        id: rel
+        shell: bash
+        run: |
+          TAG="${{ inputs.tag || github.event.release.tag_name }}"
+          if [ -z "$TAG" ] && [ "${{ github.ref_type }}" = "tag" ]; then TAG="${{ github.ref_name }}"; fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          if [ -n "$TAG" ] && [ -f "docs/releases/$TAG.md" ]; then echo "notes=docs/releases/$TAG.md" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Criar a release (ou anexar o .exe numa que já existe)
+        if: steps.rel.outputs.tag != ''
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ inputs.tag || github.event.release.tag_name }}
+          tag_name: ${{ steps.rel.outputs.tag }}
+          name: HarleAccel ${{ steps.rel.outputs.tag }}
+          body_path: ${{ steps.rel.outputs.notes }}
           files: out/HarleAccel.exe
