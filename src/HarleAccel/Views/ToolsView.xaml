@@ -26,7 +26,7 @@
                         <RadioButton x:Name="D10" Style="{StaticResource Pill}" Content="10 cm" GroupName="dist" IsChecked="True"/>
                         <RadioButton x:Name="D20" Style="{StaticResource Pill}" Content="20 cm" GroupName="dist"/>
                     </StackPanel>
-                    <Border Background="{StaticResource Panel}" CornerRadius="10" Height="110" Margin="0,0,0,12"
+                    <Border Background="{StaticResource Panel}" CornerRadius="0" Height="110" Margin="0,0,0,12"
                             BorderBrush="{StaticResource Line}" BorderThickness="1">
                         <TextBlock x:Name="DpiLive" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"
                                    Foreground="{StaticResource Muted}" Text="área de arraste" TextAlignment="Center"/>
@@ -45,7 +45,7 @@
                     <TextBlock Text="Detector de angle snapping" Style="{StaticResource H2}"/>
                     <TextBlock Style="{StaticResource Sub}" Margin="0,0,0,12"
                                Text="Angle snapping (ou “correção de ângulo”) é quando o sensor “endireita” os movimentos quase retos. Muita gente tem isso ligado no software do mouse sem saber, e ele atrapalha o microajuste. Clique em Começar e desenhe círculos grandes e devagar pela mesa por 15 segundos."/>
-                    <Border Background="{StaticResource Panel}" CornerRadius="10" Height="220" Margin="0,0,0,12" ClipToBounds="True"
+                    <Border Background="{StaticResource Panel}" CornerRadius="0" Height="220" Margin="0,0,0,12" ClipToBounds="True"
                             BorderBrush="{StaticResource Line}" BorderThickness="1">
                         <Canvas x:Name="SnapCanvas"/>
                     </Border>

@@ -43,9 +43,27 @@ namespace HarleAccel
                 return;
             }
 
+            LoadFonts();
             var w = new MainWindow();
             MainWindow = w;
             w.Show();
+        }
+
+        /// <summary>
+        /// Fontes do visual HUD (as mesmas da F.R.I.D.A.Y), embutidas no .exe: Tektur (títulos),
+        /// Sora (texto) e JetBrains Mono (números). Licença OFL, veja THIRD_PARTY_NOTICES.md.
+        /// Se algo der errado, fica a Segoe UI definida no tema.
+        /// </summary>
+        void LoadFonts()
+        {
+            try
+            {
+                var baseUri = new Uri("pack://application:,,,/");
+                Resources["UiFont"] = new System.Windows.Media.FontFamily(baseUri, "./Fonts/#Sora, Segoe UI");
+                Resources["DisplayFont"] = new System.Windows.Media.FontFamily(baseUri, "./Fonts/#Tektur, Bahnschrift, Segoe UI");
+                Resources["DataFont"] = new System.Windows.Media.FontFamily(baseUri, "./Fonts/#JetBrains Mono, Consolas");
+            }
+            catch { }
         }
 
         /// <summary>O driver não guarda a curva depois de reiniciar: aqui ela volta.</summary>

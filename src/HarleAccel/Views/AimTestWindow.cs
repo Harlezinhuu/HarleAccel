@@ -45,7 +45,8 @@ namespace HarleAccel.Views
             ResizeMode = ResizeMode.NoResize;
             WindowState = WindowState.Maximized;
             Topmost = true;
-            Background = new SolidColorBrush(Color.FromRgb(0x0A, 0x0E, 0x17));
+            Background = (Brush)Application.Current.FindResource("Bg");
+            FontFamily = (FontFamily)Application.Current.FindResource("UiFont");
             Cursor = Cursors.Cross;
             ShowInTaskbar = false;
 
@@ -53,23 +54,27 @@ namespace HarleAccel.Views
             {
                 Width = Radius * 2,
                 Height = Radius * 2,
-                Fill = new SolidColorBrush(Color.FromRgb(0x60, 0xA5, 0xFA)),
-                Stroke = Brushes.White,
+                Fill = new SolidColorBrush(Color.FromArgb(0x66, 0x6F, 0xB8, 0xFF)),
+                Stroke = new SolidColorBrush(Color.FromRgb(0x6F, 0xB8, 0xFF)),
                 StrokeThickness = 2,
+                Effect = (System.Windows.Media.Effects.Effect)Application.Current.FindResource("Glow"),
                 Visibility = Visibility.Hidden,
                 IsHitTestVisible = false,
             };
             _hud = new TextBlock
             {
-                Foreground = new SolidColorBrush(Color.FromRgb(0xD5, 0xDC, 0xE6)),
-                FontSize = 16,
+                Foreground = new SolidColorBrush(Color.FromRgb(0xE4, 0xEC, 0xFF)),
+                FontFamily = (FontFamily)Application.Current.FindResource("DataFont"),
+                FontSize = 15,
                 Margin = new Thickness(24),
                 IsHitTestVisible = false,
             };
             _big = new TextBlock
             {
-                Foreground = Brushes.White,
-                FontSize = 54,
+                Foreground = new SolidColorBrush(Color.FromRgb(0xE4, 0xEC, 0xFF)),
+                FontFamily = (FontFamily)Application.Current.FindResource("DisplayFont"),
+                Effect = (System.Windows.Media.Effects.Effect)Application.Current.FindResource("Glow"),
+                FontSize = 64,
                 FontWeight = FontWeights.Bold,
                 TextAlignment = TextAlignment.Center,
                 IsHitTestVisible = false,

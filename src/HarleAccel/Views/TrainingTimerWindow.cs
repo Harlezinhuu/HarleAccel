@@ -45,7 +45,7 @@ namespace HarleAccel.Views
             WindowStartupLocation = WindowStartupLocation.Manual;
             Left = SystemParameters.WorkArea.Right - Width - 20;
             Top = SystemParameters.WorkArea.Top + 20;
-            Background = Ui.Res("Card");
+            Background = Ui.Res("Panel");
             BorderBrush = Ui.Res("Accent");
             BorderThickness = new Thickness(1);
             FontFamily = (FontFamily)Application.Current.FindResource("UiFont");

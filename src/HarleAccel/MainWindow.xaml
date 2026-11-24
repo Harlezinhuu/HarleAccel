@@ -20,33 +20,35 @@
         </Grid.ColumnDefinitions>
 
         <!-- ========== Barra lateral ========== -->
-        <Border Background="{StaticResource Panel}" BorderBrush="{StaticResource Line}" BorderThickness="0,0,1,0">
+        <Border Background="#99050A18" BorderBrush="{StaticResource Line}" BorderThickness="0,0,1,0">
             <DockPanel Margin="16,18,16,16">
                 <!-- Logo -->
                 <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="4,0,0,26">
                     <Grid Width="44" Height="44">
-                        <Border x:Name="LogoFallback" CornerRadius="12" Background="{StaticResource AccentGradient}">
-                            <TextBlock Text="H" FontSize="22" FontWeight="Black" Foreground="White"
+                        <Border x:Name="LogoFallback" Background="{StaticResource AccentGradient}" BorderBrush="{StaticResource Accent}" BorderThickness="1">
+                            <TextBlock Text="H" FontSize="22" FontWeight="Bold" Foreground="White" FontFamily="{DynamicResource DisplayFont}"
                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <Border x:Name="LogoBorder" CornerRadius="12" ClipToBounds="True" Visibility="Collapsed">
+                        <Border x:Name="LogoBorder" ClipToBounds="True" Visibility="Collapsed" BorderBrush="{StaticResource Accent}" BorderThickness="1"
+                                Effect="{StaticResource GlowSoft}">
                             <Border.Background>
                                 <ImageBrush x:Name="LogoBrush" Stretch="UniformToFill"/>
                             </Border.Background>
                         </Border>
                     </Grid>
                     <StackPanel Margin="12,0,0,0" VerticalAlignment="Center">
-                        <TextBlock Text="HarleAccel" FontSize="18" FontWeight="Bold" Foreground="{StaticResource Silver}"/>
-                        <TextBlock Text="by Harle" FontSize="11" Foreground="{StaticResource AccentHi}"/>
+                        <TextBlock Text="HARLEACCEL" FontSize="17" FontWeight="Bold" Foreground="{StaticResource Silver}"
+                                   FontFamily="{DynamicResource DisplayFont}" Effect="{StaticResource Glow}"/>
+                        <TextBlock Text="BY HARLE" FontSize="10" Foreground="{StaticResource Muted}" FontFamily="{DynamicResource DataFont}" Margin="1,2,0,0"/>
                     </StackPanel>
                 </StackPanel>
 
                 <!-- Status do driver -->
-                <Border DockPanel.Dock="Bottom" Background="{StaticResource Card}" CornerRadius="10" Padding="12,10"
+                <Border DockPanel.Dock="Bottom" Background="{StaticResource Card}" Padding="12,10"
                         BorderBrush="{StaticResource Line}" BorderThickness="1" Margin="0,10,0,0">
                     <StackPanel Orientation="Horizontal">
-                        <Ellipse x:Name="DriverDot" Width="9" Height="9" Fill="{StaticResource Warn}" VerticalAlignment="Center"/>
-                        <TextBlock x:Name="DriverShort" Margin="8,0,0,0" FontSize="12" Foreground="{StaticResource Muted}"
+                        <Rectangle x:Name="DriverDot" Width="8" Height="8" Fill="{StaticResource Warn}" VerticalAlignment="Center" Effect="{StaticResource GlowSoft}"/>
+                        <TextBlock x:Name="DriverShort" Margin="8,0,0,0" FontSize="11" Foreground="{StaticResource Muted}" FontFamily="{DynamicResource DataFont}"
                                    Text="Driver" VerticalAlignment="Center"/>
                     </StackPanel>
                 </Border>
@@ -92,7 +94,7 @@
 
             <DockPanel Grid.Row="1" Margin="32,0,32,24">
                 <Border x:Name="UpdateBanner" DockPanel.Dock="Top" Background="{StaticResource AccentSoft}" BorderBrush="{StaticResource Accent}"
-                        BorderThickness="1" CornerRadius="10" Padding="14,10" Margin="0,0,0,14" Visibility="Collapsed">
+                        BorderThickness="1" Padding="14,10" Margin="0,0,0,14" Visibility="Collapsed">
                     <DockPanel>
                         <Button DockPanel.Dock="Right" Content="Depois" Style="{StaticResource Ghost}" Click="UpdateLater_Click"/>
                         <Button DockPanel.Dock="Right" Content="Baixar" Style="{StaticResource Primary}" Click="UpdateGet_Click" Margin="0,0,6,0"/>

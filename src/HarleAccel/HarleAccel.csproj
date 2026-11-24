@@ -9,7 +9,7 @@
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <AssemblyName>HarleAccel</AssemblyName>
     <RootNamespace>HarleAccel</RootNamespace>
-    <Version>0.4.1</Version>
+    <Version>0.5.0</Version>
     <Product>HarleAccel</Product>
     <Company>Harle</Company>
     <Copyright>Criado por Harle</Copyright>
@@ -30,6 +30,7 @@
   <ItemGroup>
     <Resource Include="Assets\*.png" />
     <Resource Include="Assets\logo.ico" />
+    <Resource Include="Fonts\*.ttf" />
     <EmbeddedResource Include="Assets\RawAccel-LICENSE.txt" LogicalName="RawAccel-LICENSE.txt" />
   </ItemGroup>
 

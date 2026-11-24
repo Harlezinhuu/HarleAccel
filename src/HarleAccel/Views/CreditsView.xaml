@@ -31,7 +31,7 @@
                     <Button Content="Raw Accel no GitHub" HorizontalAlignment="Left" Margin="0,0,0,12"
                             Tag="https://github.com/RawAccelOfficial/rawaccel" Click="Link_Click"/>
                     <TextBlock Text="LICENÇA DO RAW ACCEL (MIT)" Style="{StaticResource Label}"/>
-                    <Border Background="{StaticResource Panel}" CornerRadius="10" Padding="12">
+                    <Border Background="{StaticResource Panel}" CornerRadius="0" Padding="12">
                         <TextBlock x:Name="LicenseText" FontFamily="Consolas" FontSize="11" Foreground="{StaticResource Muted}" TextWrapping="Wrap"/>
                     </Border>
                 </StackPanel>

@@ -165,7 +165,7 @@ namespace HarleAccel.Core
 
             using (var http = new HttpClient { Timeout = TimeSpan.FromMinutes(3) })
             {
-                http.DefaultRequestHeaders.UserAgent.ParseAdd("HarleAccel/0.4.1");
+                http.DefaultRequestHeaders.UserAgent.ParseAdd("HarleAccel/0.5");
                 using var resp = await http.GetAsync(DownloadUrl, HttpCompletionOption.ResponseHeadersRead);
                 resp.EnsureSuccessStatusCode();
                 long total = resp.Content.Headers.ContentLength ?? 1_542_808;

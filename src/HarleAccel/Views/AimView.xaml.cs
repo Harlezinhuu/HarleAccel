@@ -250,7 +250,7 @@ namespace HarleAccel.Views
                 var card = new Border
                 {
                     Background = Ui.Res("Panel"),
-                    CornerRadius = new CornerRadius(10),
+                    CornerRadius = new CornerRadius(0),
                     Padding = new Thickness(12, 8, 12, 8),
                     Margin = new Thickness(0, 0, 0, 8),
                 };

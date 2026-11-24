@@ -25,7 +25,7 @@ namespace HarleAccel.Views
         public ConflictPanel()
         {
             Background = Ui.Res("Panel");
-            CornerRadius = new CornerRadius(10);
+            CornerRadius = new CornerRadius(0);
             Padding = new Thickness(14);
             Child = _root;
             _status = Ui.Text("", 12, "Muted");

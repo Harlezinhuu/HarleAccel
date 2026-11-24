@@ -66,7 +66,7 @@
                             </StackPanel>
                         </UniformGrid>
 
-                        <Border CornerRadius="10" Background="{StaticResource Panel}" Padding="12" Margin="0,0,0,12">
+                        <Border CornerRadius="0" Background="{StaticResource Panel}" Padding="12" Margin="0,0,0,12">
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="Sensibilidade " Foreground="{StaticResource Muted}" FontSize="13"/>

@@ -254,26 +254,30 @@ namespace HarleAccel.Views
                 tb.LineHeight = 21;
                 sp.Children.Add(tb);
             }
-            return new Border
+            var bubble = new Border
             {
                 Background = Ui.Res(user ? "AccentSoft" : "Card"),
                 BorderBrush = Ui.Res(user ? "Accent" : "Line"),
                 BorderThickness = new Thickness(1),
-                CornerRadius = new CornerRadius(14),
+                CornerRadius = new CornerRadius(0),
                 Padding = new Thickness(14, 10, 14, 10),
                 Margin = new Thickness(user ? 80 : 0, 0, user ? 0 : 80, 10),
                 HorizontalAlignment = user ? HorizontalAlignment.Right : HorizontalAlignment.Left,
                 MaxWidth = 680,
                 Child = sp,
             };
+            if (!user) Controls.Hud.SetBrackets(bubble, true);
+            return bubble;
         }
 
-        Border CardShell(UIElement content) => new()
+        Border CardShell(UIElement content)
+        {
+            var b = new Border
         {
             Background = Ui.Res("Card"),
             BorderBrush = Ui.Res("Line"),
             BorderThickness = new Thickness(1),
-            CornerRadius = new CornerRadius(14),
+            CornerRadius = new CornerRadius(0),
             Padding = new Thickness(16, 12, 16, 12),
             Margin = new Thickness(0, 0, 80, 10),
             HorizontalAlignment = HorizontalAlignment.Left,
@@ -281,6 +285,9 @@ namespace HarleAccel.Views
             MaxWidth = 680,
             Child = content,
         };
+            Controls.Hud.SetBrackets(b, true);
+            return b;
+        }
 
         UIElement ConversionCard(ConversionResult c)
         {

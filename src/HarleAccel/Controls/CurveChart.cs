@@ -30,16 +30,17 @@ namespace HarleAccel.Controls
         public const double MicroMax = 8;   // cm/s
         public const double TrackMax = 40;  // cm/s
 
-        static readonly Brush BgBrush = Freeze(new SolidColorBrush(Color.FromRgb(0x0F, 0x15, 0x22)));
-        static readonly Brush GridBrush = Freeze(new SolidColorBrush(Color.FromArgb(0x55, 0x24, 0x32, 0x4D)));
-        static readonly Brush AxisText = Freeze(new SolidColorBrush(Color.FromRgb(0x83, 0x91, 0xAB)));
-        static readonly Brush ZoneMicro = Freeze(new SolidColorBrush(Color.FromArgb(0x16, 0x22, 0xC5, 0x5E)));
-        static readonly Brush ZoneTrack = Freeze(new SolidColorBrush(Color.FromArgb(0x12, 0x3B, 0x82, 0xF6)));
-        static readonly Brush ZoneFlick = Freeze(new SolidColorBrush(Color.FromArgb(0x14, 0xF5, 0x9E, 0x0B)));
-        static readonly Pen XPen = FreezePen(new Pen(new SolidColorBrush(Color.FromRgb(0x60, 0xA5, 0xFA)), 3) { LineJoin = PenLineJoin.Round });
-        static readonly Pen YPen = FreezePen(new Pen(new SolidColorBrush(Color.FromRgb(0xD5, 0xDC, 0xE6)), 2) { DashStyle = new DashStyle(new double[] { 3, 2 }, 0) });
-        static readonly Pen CmpPen = FreezePen(new Pen(new SolidColorBrush(Color.FromArgb(0x88, 0x83, 0x91, 0xAB)), 1.5) { DashStyle = DashStyles.Dot });
+        static readonly Brush BgBrush = Freeze(new SolidColorBrush(Color.FromArgb(0xB3, 0x07, 0x0F, 0x24)));
+        static readonly Brush GridBrush = Freeze(new SolidColorBrush(Color.FromArgb(0x24, 0x6F, 0xB8, 0xFF)));
+        static readonly Brush AxisText = Freeze(new SolidColorBrush(Color.FromRgb(0x93, 0xA3, 0xC8)));
+        static readonly Brush ZoneMicro = Freeze(new SolidColorBrush(Color.FromArgb(0x14, 0x5B, 0xE3, 0xA8)));
+        static readonly Brush ZoneTrack = Freeze(new SolidColorBrush(Color.FromArgb(0x10, 0x6F, 0xB8, 0xFF)));
+        static readonly Brush ZoneFlick = Freeze(new SolidColorBrush(Color.FromArgb(0x14, 0xFF, 0x8A, 0x3D)));
+        static readonly Pen XPen = FreezePen(new Pen(new SolidColorBrush(Color.FromRgb(0x6F, 0xB8, 0xFF)), 2.5) { LineJoin = PenLineJoin.Round });
+        static readonly Pen YPen = FreezePen(new Pen(new SolidColorBrush(Color.FromRgb(0xE4, 0xEC, 0xFF)), 1.6) { DashStyle = new DashStyle(new double[] { 3, 2 }, 0) });
+        static readonly Pen CmpPen = FreezePen(new Pen(new SolidColorBrush(Color.FromArgb(0x99, 0x93, 0xA3, 0xC8)), 1.5) { DashStyle = DashStyles.Dot });
         static readonly Pen GridPen = FreezePen(new Pen(GridBrush, 1));
+        static readonly Pen GlowPen = FreezePen(new Pen(new SolidColorBrush(Color.FromArgb(0x33, 0x6F, 0xB8, 0xFF)), 9) { LineJoin = PenLineJoin.Round, StartLineCap = PenLineCap.Round, EndLineCap = PenLineCap.Round });
         static readonly Pen HoverPen = FreezePen(new Pen(new SolidColorBrush(Color.FromArgb(0x99, 0xD5, 0xDC, 0xE6)), 1) { DashStyle = DashStyles.Dash });
 
         static Brush Freeze(Brush b) { b.Freeze(); return b; }
@@ -64,7 +65,7 @@ namespace HarleAccel.Controls
             InvalidateVisual();
         }
 
-        static readonly Brush HistBrush = Freeze(new SolidColorBrush(Color.FromArgb(0x50, 0x60, 0xA5, 0xFA)));
+        static readonly Brush HistBrush = Freeze(new SolidColorBrush(Color.FromArgb(0x38, 0x6F, 0xB8, 0xFF)));
 
         public void SetMessage(string msg)
         {
@@ -92,7 +93,7 @@ namespace HarleAccel.Controls
         protected override void OnRender(DrawingContext dc)
         {
             var r = PlotRect;
-            dc.DrawRoundedRectangle(BgBrush, null, new Rect(0, 0, ActualWidth, ActualHeight), 12, 12);
+            dc.DrawRectangle(BgBrush, new Pen(GridBrush, 1), new Rect(0.5, 0.5, Math.Max(0, ActualWidth - 1), Math.Max(0, ActualHeight - 1)));
 
             if (_message != null)
             {
@@ -160,6 +161,7 @@ namespace HarleAccel.Controls
             // curvas
             if (_compare != null) DrawCurve(dc, _compare, CmpPen, X, Y, yMax);
             if (_fy != null) DrawCurve(dc, _fy, YPen, X, Y, yMax);
+            DrawCurve(dc, _fx, GlowPen, X, Y, yMax); // brilho de holograma por baixo
             DrawCurve(dc, _fx, XPen, X, Y, yMax);
 
             // legenda
@@ -190,8 +192,8 @@ namespace HarleAccel.Controls
                     var tip = Text($"{s:0} cm/s → {mx.ToString("0.00", CultureInfo.InvariantCulture)}x", 12, Brushes.White);
                     double tx = Math.Min(mp.X + 10, r.Right - tip.Width - 14);
                     double ty = Math.Max(r.Top + 22, Y(Math.Min(mx, yMax)) - 34);
-                    dc.DrawRoundedRectangle(new SolidColorBrush(Color.FromArgb(0xE6, 0x14, 0x1C, 0x2D)), new Pen(Brushes.SteelBlue, 1),
-                        new Rect(tx - 6, ty - 4, tip.Width + 12, tip.Height + 8), 6, 6);
+                    dc.DrawRectangle(new SolidColorBrush(Color.FromArgb(0xE6, 0x08, 0x12, 0x30)), new Pen(XPen.Brush, 1),
+                        new Rect(tx - 6, ty - 4, tip.Width + 12, tip.Height + 8));
                     dc.DrawText(tip, new Point(tx, ty));
                 }
             }
@@ -220,11 +222,16 @@ namespace HarleAccel.Controls
             dc.DrawGeometry(null, pen, geo);
         }
 
+        static Typeface? _typeface;
+        static Typeface ChartTypeface => _typeface ??= new Typeface(
+            Application.Current?.TryFindResource("DataFont") as FontFamily ?? new FontFamily("Consolas"),
+            FontStyles.Normal, FontWeights.Normal, FontStretches.Normal);
+
         void DrawLabel(DrawingContext dc, string text, double x, double y) =>
             dc.DrawText(Text(text, 10, AxisText), new Point(x, y));
 
         FormattedText Text(string s, double size, Brush b) =>
-            new(s, CultureInfo.CurrentUICulture, FlowDirection.LeftToRight, new Typeface("Segoe UI"), size, b,
+            new(s, CultureInfo.CurrentUICulture, FlowDirection.LeftToRight, ChartTypeface, size, b,
                 VisualTreeHelper.GetDpi(this).PixelsPerDip);
 
         protected override void OnMouseMove(MouseEventArgs e)

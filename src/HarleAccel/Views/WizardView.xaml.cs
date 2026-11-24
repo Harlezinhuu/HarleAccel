@@ -69,7 +69,7 @@ namespace HarleAccel.Views
                 bool active = i == _step, done = i < _step;
                 var b = new Border
                 {
-                    CornerRadius = new CornerRadius(8),
+                    CornerRadius = new CornerRadius(0),
                     Padding = new Thickness(12, 6, 12, 6),
                     Margin = new Thickness(0, 0, 8, 0),
                     Background = active ? Ui.Res("AccentSoft") : Ui.Res("Panel"),

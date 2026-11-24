@@ -20,7 +20,10 @@ Pegue o `HarleAccel.exe` na página de [Releases](https://github.com/Harlezinhuu
 
 O HarleAccel usa o **driver oficial e assinado do [Raw Accel](https://github.com/RawAccelOfficial/rawaccel)**, o mesmo que funciona com Vanguard e FACEIT. Em cima dele, traz uma interface nova e ferramentas que o Raw Accel não tem: um teste que lê como você joga e recomenda a curva, um teste cego A/B, diagnóstico do mouse e treino de adaptação.
 
-## Funcionalidades (v0.4.1)
+## Funcionalidades (v0.5)
+
+**Visual HUD:** o mesmo estilo holográfico da F.R.I.D.A.Y. Usa azul-holograma sobre azul-marinho, cantoneiras nos painéis, linhas de scan, brilho nos títulos e as fontes Tektur, Sora e JetBrains Mono.
+
 
 **Harle IA**
 - **Chat dentro do app.** Ele entende pedidos como "8% fortnite 800 dpi pro valorant" **sem internet e sem chave**, e mostra o resultado num cartão com botão de copiar.

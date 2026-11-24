@@ -36,3 +36,16 @@ Os nomes de cenários, as playlists e os códigos de compartilhamento das rotina
 de treino vêm das rotinas fundamentais públicas do Voltaic (https://voltaic.gg),
 para Aim Lab e KovaaK's. Todo o crédito é dos criadores. Voltaic, Aim Lab e
 KovaaK's não são afiliados ao HarleAccel.
+
+## Fontes
+
+O visual usa três fontes embutidas no app (`src/HarleAccel/Fonts/`), todas sob a
+SIL Open Font License 1.1 (OFL), que permite embutir e redistribuir:
+
+- **Tektur**: Copyright 2023 The Tektur Project Authors (https://www.github.com/hyvyys/Tektur)
+- **Sora**: Copyright 2019 The Sora Project Authors (https://github.com/sora-xor/sora-font)
+- **JetBrains Mono**: Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)
+
+As versões embutidas são instâncias fixas (um arquivo por peso) geradas a partir das
+fontes variáveis publicadas no repositório google/fonts. O texto completo da licença
+está em `src/HarleAccel/Fonts/OFL.txt`.
