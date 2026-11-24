@@ -44,6 +44,9 @@ namespace HarleAccel.Core
     public sealed class AppSettings
     {
         public bool CheckUpdates { get; set; } = true;
+
+        /// <summary>Reaplicar a curva quando o Windows inicia (o driver não guarda a curva sozinho).</summary>
+        public bool ApplyOnStartup { get; set; } = true;
         public bool DiscordEnabled { get; set; }
         public string DiscordClientId { get; set; } = "";
         public string RoutinesUrl { get; set; } = UpdateChecker.DefaultRoutinesUrl;

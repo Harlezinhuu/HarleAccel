@@ -20,7 +20,7 @@ Pegue o `HarleAccel.exe` na página de [Releases](https://github.com/Harlezinhuu
 
 O HarleAccel usa o **driver oficial e assinado do [Raw Accel](https://github.com/RawAccelOfficial/rawaccel)**, o mesmo que funciona com Vanguard e FACEIT. Em cima dele, traz uma interface nova e ferramentas que o Raw Accel não tem: um teste que lê como você joga e recomenda a curva, um teste cego A/B, diagnóstico do mouse e treino de adaptação.
 
-## Funcionalidades (v0.4)
+## Funcionalidades (v0.4.1)
 
 **Harle IA**
 - **Chat dentro do app.** Ele entende pedidos como "8% fortnite 800 dpi pro valorant" **sem internet e sem chave**, e mostra o resultado num cartão com botão de copiar.
@@ -47,6 +47,11 @@ O HarleAccel usa o **driver oficial e assinado do [Raw Accel](https://github.com
   - Os cenários vêm das rotinas públicas do Voltaic.
   - Tem cronômetro por cima do jogo e registro de score com a evolução.
 
+**Para quem já usava o Raw Accel**
+- **Migração sem conflito.** O app encontra o Raw Accel original e resolve cada conflito com um clique: tira o atalho dele da inicialização do Windows (vai para um backup, dá para devolver), fecha a janela dele, instala a versão certa do driver por cima e importa o seu `settings.json` antigo.
+- **A curva volta sozinha depois de reiniciar.** O driver não guarda a curva, então o HarleAccel abre escondido no login, reaplica e fecha.
+- **Desinstalador** nas Configurações: remove o driver com o desinstalador oficial, tira da inicialização e, se quiser, apaga os dados.
+
 **App**
 - **Aviso de nova versão**, pelo GitHub Releases deste repositório.
 - **Discord Rich Presence** (precisa de um Application ID, veja em Configurações).
@@ -69,9 +74,9 @@ Precisa do .NET 8 SDK.
 dotnet publish src/HarleAccel/HarleAccel.csproj -c Release -o out
 ```
 
-Sai um `HarleAccel.exe` único, que roda sem instalar o .NET. O GitHub Actions (`.github/workflows/build.yml`) faz isso sozinho e cria um release quando você manda uma tag, por exemplo `v0.3.0`.
+Sai um `HarleAccel.exe` único, que roda sem instalar o .NET. O GitHub Actions (`.github/workflows/build.yml`) faz isso sozinho: quando você publica uma release no site do GitHub, ele roda os testes, gera o .exe e anexa na release.
 
-**Para o aviso de versão funcionar:** o repositório precisa se chamar `Harlezinhuu/HarleAccel`, e as releases precisam de tags no formato `vX.Y.Z`.
+**Para o aviso de versão funcionar:** o repositório precisa se chamar `Harlezinhuu/HarleAccel`, e as tags das releases precisam ser números de versão (`0.4.1` ou `v0.4.1`).
 
 
 ## Testes

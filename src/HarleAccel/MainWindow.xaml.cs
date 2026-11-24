@@ -90,6 +90,8 @@ namespace HarleAccel
                 // se o app fechou no meio de um teste, devolve a curva
                 if (AppState.Current.NeutralActive) await DriverService.EndNeutralAsync();
 
+                AutoStart.Sync(); // mantém a reaplicação no login (e atualiza o caminho se o .exe mudou de lugar)
+
                 await TrainingLibrary.LoadAsync();
 
                 if (AppState.Current.Settings.CheckUpdates)

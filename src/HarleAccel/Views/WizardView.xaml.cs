@@ -223,6 +223,7 @@ namespace HarleAccel.Views
             };
             EppStatus.Foreground = Ui.Res(on == false ? "Ok" : "Warn");
             EppFixBtn.Visibility = on == true ? Visibility.Visible : Visibility.Collapsed;
+            ConflictHost.Content = new ConflictPanel();
         }
 
         void EppFix_Click(object sender, RoutedEventArgs e)

@@ -27,6 +27,10 @@ namespace HarleAccel.Views
             _loading = true;
             var s = AppState.Current.Settings;
             UpdatesBox.IsChecked = s.CheckUpdates;
+            AutoStartBox.IsChecked = s.ApplyOnStartup;
+            ConflictHost.Content = new ConflictPanel();
+            UninstallRestoreBox.Visibility = Migration.HasBackup ? Visibility.Visible : Visibility.Collapsed;
+            UninstallRestoreBox.IsChecked = Migration.HasBackup;
             DiscordBox.IsChecked = s.DiscordEnabled;
             DiscordIdBox.Text = s.DiscordClientId;
             RoutinesUrlBox.Text = s.RoutinesUrl;
@@ -44,6 +48,8 @@ namespace HarleAccel.Views
             if (_loading) return;
             var s = AppState.Current.Settings;
             s.CheckUpdates = UpdatesBox.IsChecked == true;
+            s.ApplyOnStartup = AutoStartBox.IsChecked == true;
+            AutoStart.Sync();
             s.DiscordEnabled = DiscordBox.IsChecked == true;
             string id = DiscordIdBox.Text.Trim();
             s.DiscordClientId = System.Text.RegularExpressions.Regex.IsMatch(id, "^[0-9]{5,25}$") ? id : "";
@@ -114,6 +120,66 @@ namespace HarleAccel.Views
             if (dlg.ShowDialog() != true) return;
             File.WriteAllText(dlg.FileName, TrainingLibrary.ToJson(TrainingLibrary.Current));
             RoutinesStatus.Text = "Exportado. Suba esse arquivo em routines/routines.json no GitHub.";
+        }
+
+        async void Uninstall_Click(object sender, RoutedEventArgs e)
+        {
+            bool deleteData = UninstallDataBox.IsChecked == true;
+            var answer = MessageBox.Show(
+                "Isso vai:\n" +
+                "• remover o driver do Raw Accel (vai aparecer o aviso de administrador)\n" +
+                "• tirar o HarleAccel da inicialização do Windows\n" +
+                (deleteData ? "• apagar as suas configurações, histórico e conversas\n" : "") +
+                "\nDepois o app fecha. Continuar?",
+                "Desinstalar o HarleAccel", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (answer != MessageBoxResult.Yes) return;
+
+            UninstallBtn.IsEnabled = false;
+            try
+            {
+                // 1) inicialização
+                AppState.Current.Settings.ApplyOnStartup = false;
+                AutoStart.Unregister();
+
+                // 2) driver (desinstalador oficial, conferido por hash)
+                if (DriverService.IsDriverInstalled)
+                {
+                    Ui.SetStatus(UninstallStatus, "Preparando o desinstalador oficial...", true);
+                    if (!DriverService.IsDownloaded) await DriverService.DownloadAsync();
+                    if (!await DriverService.RunOfficialUninstallerAsync())
+                    {
+                        Ui.SetStatus(UninstallStatus, "Cancelado no aviso de administrador. Nada foi removido do driver.", false);
+                        UninstallBtn.IsEnabled = true;
+                        AppState.Save();
+                        return;
+                    }
+                }
+
+                // 3) atalhos do Raw Accel original
+                if (UninstallRestoreBox.IsChecked == true) Migration.RestoreShortcuts();
+
+                // 4) dados
+                if (deleteData)
+                {
+                    TryDelete(AppState.Folder);
+                    TryDelete(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "HarleAccel"));
+                }
+                else AppState.Save();
+
+                MessageBox.Show("Pronto! Reinicie o PC para terminar de remover o driver. Depois é só apagar o HarleAccel.exe.",
+                    "HarleAccel", MessageBoxButton.OK, MessageBoxImage.Information);
+                Application.Current.Shutdown();
+            }
+            catch (Exception ex)
+            {
+                Ui.SetStatus(UninstallStatus, "Erro: " + ex.Message, false);
+                UninstallBtn.IsEnabled = true;
+            }
+        }
+
+        static void TryDelete(string dir)
+        {
+            try { if (Directory.Exists(dir)) Directory.Delete(dir, true); } catch { }
         }
 
         void OpenData_Click(object sender, RoutedEventArgs e)

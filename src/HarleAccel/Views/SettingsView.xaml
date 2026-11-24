@@ -10,6 +10,22 @@
 
             <Border Style="{StaticResource CardBorder}" Margin="0,16,0,0">
                 <StackPanel>
+                    <TextBlock Text="Inicialização do Windows" Style="{StaticResource H2}"/>
+                    <CheckBox x:Name="AutoStartBox" Content="Reaplicar a minha curva quando o Windows ligar (recomendado)" Checked="Save_Changed" Unchecked="Save_Changed"/>
+                    <TextBlock Style="{StaticResource Sub}" FontSize="12" Margin="0,8,0,0"
+                               Text="O driver do Raw Accel não guarda a curva quando o PC reinicia. Com isto ligado, o HarleAccel abre escondido no login, reaplica a sua curva em poucos segundos e fecha. Não fica rodando e não precisa de administrador."/>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource CardBorder}" Margin="0,16,0,0">
+                <StackPanel>
+                    <TextBlock Text="Quem já usava o Raw Accel" Style="{StaticResource H2}"/>
+                    <ContentControl x:Name="ConflictHost"/>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource CardBorder}" Margin="0,16,0,0">
+                <StackPanel>
                     <TextBlock Text="Atualizações" Style="{StaticResource H2}"/>
                     <CheckBox x:Name="UpdatesBox" Content="Avisar quando sair versão nova (confere o GitHub ao abrir)" Checked="Save_Changed" Unchecked="Save_Changed"/>
                     <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
@@ -68,6 +84,20 @@
                         <Button Content="Recarregar rotinas" Click="ReloadRoutines_Click"/>
                         <Button Content="Exportar routines.json" Click="ExportRoutines_Click" Margin="8,0,0,0"/>
                         <TextBlock x:Name="RoutinesStatus" Margin="12,0,0,0" FontSize="12" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource CardBorder}" Margin="0,16,0,0" BorderBrush="{StaticResource Danger}">
+                <StackPanel>
+                    <TextBlock Text="Desinstalar o HarleAccel" Style="{StaticResource H2}"/>
+                    <TextBlock Style="{StaticResource Sub}" Margin="0,0,0,10" LineHeight="20"
+                               Text="Remove o driver do Raw Accel com o desinstalador oficial (pede administrador), tira o HarleAccel da inicialização e, se você quiser, apaga as suas configurações. Depois é só reiniciar o PC e apagar o HarleAccel.exe."/>
+                    <CheckBox x:Name="UninstallDataBox" Content="Apagar também as minhas configurações, histórico e conversas" Margin="0,0,0,8"/>
+                    <CheckBox x:Name="UninstallRestoreBox" Content="Devolver os atalhos do Raw Accel original para a inicialização" Margin="0,0,0,12"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="UninstallBtn" Content="Desinstalar" Click="Uninstall_Click" Background="{StaticResource Danger}" BorderBrush="Transparent" Foreground="White"/>
+                        <TextBlock x:Name="UninstallStatus" Margin="12,0,0,0" FontSize="12" VerticalAlignment="Center" TextWrapping="Wrap"/>
                     </StackPanel>
                 </StackPanel>
             </Border>

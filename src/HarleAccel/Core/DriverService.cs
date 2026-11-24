@@ -45,6 +45,7 @@ namespace HarleAccel.Core
         static readonly (string File, string Hash)[] OfficialFiles =
         {
             ("installer.exe", "b3b4948de9470a5727390ed016507b59d2c628463e42aaf1b75e906ee04f58a9"),
+            ("uninstaller.exe", "62090da1ecd73aa18c2119650a4384d80691fcbabb90716cf5f731ed084a51ca"),
             ("writer.exe", "b53e29c7689b9d72838ffbfd1502b8d0407160d3f77b54eb15a7c632f689aa04"),
             ("wrapper.dll", "e17d540fb0bb5e47ba7c8e01aff39f1570bfb7ef673a1ddc0bccd2a26f9efb78"),
             ("Newtonsoft.Json.dll", "b624949df8b0e3a6153fdfb730a7c6f4990b6592ee0d922e1788433d276610f3"),
@@ -92,6 +93,28 @@ namespace HarleAccel.Core
 
         public static bool IsDownloaded => IsValidRawAccelDir(RawAccelDir);
 
+        const string OfficialDriverHash = "8a62c4deef2774b43a7363b352eda79897533a1080c9c26ffeff0559e43358d7";
+
+        static string InstalledDriverPath => Environment.ExpandEnvironmentVariables(@"%SystemRoot%\System32\drivers\rawaccel.sys");
+
+        /// <summary>
+        /// true = o driver instalado no Windows é exatamente o 1.7.1 oficial.
+        /// false = tem outro (versão antiga ou diferente). null = não tem driver ou não deu para ler.
+        /// </summary>
+        public static bool? InstalledDriverIsOfficial
+        {
+            get
+            {
+                try
+                {
+                    if (!File.Exists(InstalledDriverPath)) return null;
+                    using var fs = File.OpenRead(InstalledDriverPath);
+                    return Convert.ToHexString(SHA256.HashData(fs)).ToLowerInvariant() == OfficialDriverHash;
+                }
+                catch { return null; }
+            }
+        }
+
         public static bool IsDriverInstalled =>
             File.Exists(Environment.ExpandEnvironmentVariables(@"%SystemRoot%\System32\drivers\rawaccel.sys"));
 
@@ -126,7 +149,9 @@ namespace HarleAccel.Core
                 : "Driver não baixado.",
             DriverStatus.NotInstalled => "Pacote oficial baixado e verificado. Falta instalar o driver.",
             DriverStatus.NeedsRestart => "Driver instalado. Reinicie o PC para ele começar a funcionar.",
-            DriverStatus.Active => $"Driver oficial do Raw Accel ativo.",
+            DriverStatus.Active => InstalledDriverIsOfficial == false
+                ? "Tem um driver do Raw Accel de OUTRA versão ativo. Reinstale pelo assistente para usar a versão do HarleAccel."
+                : "Driver oficial do Raw Accel ativo.",
             _ => "",
         };
 
@@ -140,7 +165,7 @@ namespace HarleAccel.Core
 
             using (var http = new HttpClient { Timeout = TimeSpan.FromMinutes(3) })
             {
-                http.DefaultRequestHeaders.UserAgent.ParseAdd("HarleAccel/0.4");
+                http.DefaultRequestHeaders.UserAgent.ParseAdd("HarleAccel/0.4.1");
                 using var resp = await http.GetAsync(DownloadUrl, HttpCompletionOption.ResponseHeadersRead);
                 resp.EnsureSuccessStatusCode();
                 long total = resp.Content.Headers.ContentLength ?? 1_542_808;
@@ -194,17 +219,27 @@ namespace HarleAccel.Core
         /// Roda o installer.exe oficial como administrador (aparece o aviso do Windows).
         /// Retorna false se a pessoa cancelou o pedido de admin.
         /// </summary>
-        public static async Task<bool> RunOfficialInstallerAsync()
+        public static Task<bool> RunOfficialInstallerAsync() => RunOfficialElevatedAsync("installer.exe");
+
+        /// <summary>Roda o uninstaller.exe oficial (remove o driver de qualquer versão do Raw Accel).</summary>
+        public static Task<bool> RunOfficialUninstallerAsync() => RunOfficialElevatedAsync("uninstaller.exe");
+
+        /// <summary>
+        /// Roda um executável oficial do Raw Accel como administrador (aparece o aviso do Windows).
+        /// Confere o hash logo antes. Retorna false se a pessoa cancelou o pedido de admin.
+        /// </summary>
+        static async Task<bool> RunOfficialElevatedAsync(string exe)
         {
             string dir = RawAccelDir;
-            // confere o instalador e o driver logo antes de rodar como admin
-            string? bad = FindTamperedFile(dir, "installer.exe", @"driver\rawaccel.sys");
+            string? bad = exe == "installer.exe"
+                ? FindTamperedFile(dir, "installer.exe", @"driver\rawaccel.sys")
+                : FindTamperedFile(dir, exe);
             if (bad != null)
-                throw new InvalidDataException($"O arquivo {bad} não é o original do Raw Accel {Version}. Por segurança o instalador não foi executado. Baixe o pacote de novo pelo assistente.");
+                throw new InvalidDataException($"O arquivo {bad} não é o original do Raw Accel {Version}. Por segurança nada foi executado. Baixe o pacote de novo pelo assistente.");
 
             // O instalador oficial usa caminho relativo (driver\rawaccel.sys), por isso entra na pasta antes.
             string cmd = Path.Combine(Environment.SystemDirectory, "cmd.exe");
-            var psi = new ProcessStartInfo(cmd, $"/c cd /d \"{dir}\" && \"{Path.Combine(dir, "installer.exe")}\"")
+            var psi = new ProcessStartInfo(cmd, $"/c cd /d \"{dir}\" && \"{Path.Combine(dir, exe)}\"")
             {
                 UseShellExecute = true,
                 Verb = "runas",

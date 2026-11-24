@@ -88,13 +88,7 @@
                         </StackPanel>
                     </Border>
 
-                    <Border Background="{StaticResource Panel}" CornerRadius="10" Padding="14">
-                        <StackPanel>
-                            <TextBlock Text="Raw Accel original" FontWeight="SemiBold" FontSize="14"/>
-                            <TextBlock Style="{StaticResource Sub}" Margin="0,4,0,0"
-                                       Text="Se você usa a janela do Raw Accel original, deixe ela fechada: ao abrir, ela aplica as configurações dela por cima das do HarleAccel. Quer trazer a sua curva de lá? Use “Importar do Raw Accel” na tela Curva."/>
-                        </StackPanel>
-                    </Border>
+                    <ContentControl x:Name="ConflictHost"/>
                 </StackPanel>
 
                 <!-- 4. Base -->

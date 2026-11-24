@@ -75,6 +75,7 @@ namespace HarleAccel.Views
                 NextSteps.Children.Add(row);
             }
 
+            if (Migration.Detect().HasConflict) Step("Encontramos o Raw Accel original, que pode brigar com o HarleAccel. Resolva em um clique.", "settings", "Resolver");
             if (DriverService.Status != DriverStatus.Active) Step("Deixe o driver do Raw Accel pronto.", "wizard", "Assistente");
             if (st.LastReport == null) Step("Faça o Teste de Perfil: 2 ou 3 partidas e o app recomenda a sua curva.", "profile", "Teste de Perfil");
             else if (st.Applied == null || AimViewKey(st.Applied) != AimViewKey(st.LastReport.Recommended))
