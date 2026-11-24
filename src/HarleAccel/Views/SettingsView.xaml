@@ -10,20 +10,6 @@
 
             <Border Style="{StaticResource CardBorder}" Margin="0,16,0,0">
                 <StackPanel>
-                    <TextBlock Text="Aparência" Style="{StaticResource H2}"/>
-                    <DockPanel>
-                        <TextBlock x:Name="OpacityVal" DockPanel.Dock="Right" Foreground="{StaticResource AccentHi}" FontFamily="{DynamicResource DataFont}" FontSize="12"/>
-                        <TextBlock Text="TRANSPARÊNCIA DA JANELA" Style="{StaticResource Label}"/>
-                    </DockPanel>
-                    <Slider x:Name="OpacitySlider" Minimum="0" Maximum="50" SmallChange="1" ValueChanged="Opacity_Changed" Margin="0,0,0,12"/>
-                    <CheckBox x:Name="GlassBox" Content="Vidro fosco (desfoca o que está atrás da janela)" Checked="Glass_Changed" Unchecked="Glass_Changed"/>
-                    <TextBlock Style="{StaticResource Sub}" FontSize="12" Margin="0,8,0,0"
-                               Text="Se o texto ficar difícil de ler por cima de um papel de parede muito claro, diminua a transparência."/>
-                </StackPanel>
-            </Border>
-
-            <Border Style="{StaticResource CardBorder}" Margin="0,16,0,0">
-                <StackPanel>
                     <TextBlock Text="Inicialização do Windows" Style="{StaticResource H2}"/>
                     <CheckBox x:Name="AutoStartBox" Content="Reaplicar a minha curva quando o Windows ligar (recomendado)" Checked="Save_Changed" Unchecked="Save_Changed"/>
                     <TextBlock Style="{StaticResource Sub}" FontSize="12" Margin="0,8,0,0"

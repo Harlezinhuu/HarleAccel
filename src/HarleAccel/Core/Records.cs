@@ -47,12 +47,6 @@ namespace HarleAccel.Core
 
         /// <summary>Reaplicar a curva quando o Windows inicia (o driver não guarda a curva sozinho).</summary>
         public bool ApplyOnStartup { get; set; } = true;
-
-        /// <summary>Vidro fosco: desfoca o que está atrás da janela.</summary>
-        public bool GlassBlur { get; set; } = true;
-
-        /// <summary>Quanto o fundo da janela cobre (0.5 = bem transparente, 1 = sólido).</summary>
-        public double WindowOpacity { get; set; } = 0.75;
         public bool DiscordEnabled { get; set; }
         public string DiscordClientId { get; set; } = "";
         public string RoutinesUrl { get; set; } = UpdateChecker.DefaultRoutinesUrl;
