@@ -54,8 +54,8 @@ namespace HarleAccel.Views
             {
                 Width = Radius * 2,
                 Height = Radius * 2,
-                Fill = new SolidColorBrush(Color.FromArgb(0x66, 0x6F, 0xB8, 0xFF)),
-                Stroke = new SolidColorBrush(Color.FromRgb(0x6F, 0xB8, 0xFF)),
+                Fill = new SolidColorBrush(Color.FromArgb(0x66, 0x8C, 0xCF, 0xFF)),
+                Stroke = new SolidColorBrush(Color.FromRgb(0x8C, 0xCF, 0xFF)),
                 StrokeThickness = 2,
                 Effect = (System.Windows.Media.Effects.Effect)Application.Current.FindResource("Glow"),
                 Visibility = Visibility.Hidden,

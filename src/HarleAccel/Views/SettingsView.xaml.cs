@@ -27,6 +27,9 @@ namespace HarleAccel.Views
             _loading = true;
             var s = AppState.Current.Settings;
             UpdatesBox.IsChecked = s.CheckUpdates;
+            GlassBox.IsChecked = s.GlassBlur;
+            OpacitySlider.Value = Math.Round((1 - Math.Clamp(s.WindowOpacity, 0.5, 1.0)) * 100);
+            OpacityVal.Text = $"{OpacitySlider.Value:0}%";
             AutoStartBox.IsChecked = s.ApplyOnStartup;
             ConflictHost.Content = new ConflictPanel();
             UninstallRestoreBox.Visibility = Migration.HasBackup ? Visibility.Visible : Visibility.Collapsed;
@@ -69,6 +72,23 @@ namespace HarleAccel.Views
             if (string.IsNullOrWhiteSpace(s.DiscordClientId)) { Ui.SetStatus(DiscordStatus, "Cole o Application ID para ativar.", false); return; }
             await System.Threading.Tasks.Task.Delay(1500);
             Ui.SetStatus(DiscordStatus, DiscordRpc.Connected ? "Conectado ao Discord." : "Não conectou. O Discord está aberto? O ID está certo?", DiscordRpc.Connected);
+        }
+
+        void Opacity_Changed(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (_loading || OpacityVal == null) return;
+            AppState.Current.Settings.WindowOpacity = 1 - OpacitySlider.Value / 100.0;
+            OpacityVal.Text = $"{OpacitySlider.Value:0}%";
+            MainWindow.Instance?.ApplyAppearance();
+            AppState.Save();
+        }
+
+        void Glass_Changed(object sender, RoutedEventArgs e)
+        {
+            if (_loading) return;
+            AppState.Current.Settings.GlassBlur = GlassBox.IsChecked == true;
+            MainWindow.Instance?.ApplyAppearance();
+            AppState.Save();
         }
 
         void SaveKey_Click(object sender, RoutedEventArgs e)

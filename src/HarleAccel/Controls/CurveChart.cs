@@ -30,17 +30,17 @@ namespace HarleAccel.Controls
         public const double MicroMax = 8;   // cm/s
         public const double TrackMax = 40;  // cm/s
 
-        static readonly Brush BgBrush = Freeze(new SolidColorBrush(Color.FromArgb(0xB3, 0x07, 0x0F, 0x24)));
-        static readonly Brush GridBrush = Freeze(new SolidColorBrush(Color.FromArgb(0x24, 0x6F, 0xB8, 0xFF)));
+        static readonly Brush BgBrush = Freeze(new SolidColorBrush(Color.FromArgb(0x99, 0x0C, 0x1C, 0x40)));
+        static readonly Brush GridBrush = Freeze(new SolidColorBrush(Color.FromArgb(0x24, 0x8C, 0xCF, 0xFF)));
         static readonly Brush AxisText = Freeze(new SolidColorBrush(Color.FromRgb(0x93, 0xA3, 0xC8)));
         static readonly Brush ZoneMicro = Freeze(new SolidColorBrush(Color.FromArgb(0x14, 0x5B, 0xE3, 0xA8)));
-        static readonly Brush ZoneTrack = Freeze(new SolidColorBrush(Color.FromArgb(0x10, 0x6F, 0xB8, 0xFF)));
+        static readonly Brush ZoneTrack = Freeze(new SolidColorBrush(Color.FromArgb(0x10, 0x8C, 0xCF, 0xFF)));
         static readonly Brush ZoneFlick = Freeze(new SolidColorBrush(Color.FromArgb(0x14, 0xFF, 0x8A, 0x3D)));
-        static readonly Pen XPen = FreezePen(new Pen(new SolidColorBrush(Color.FromRgb(0x6F, 0xB8, 0xFF)), 2.5) { LineJoin = PenLineJoin.Round });
+        static readonly Pen XPen = FreezePen(new Pen(new SolidColorBrush(Color.FromRgb(0x8C, 0xCF, 0xFF)), 2.5) { LineJoin = PenLineJoin.Round });
         static readonly Pen YPen = FreezePen(new Pen(new SolidColorBrush(Color.FromRgb(0xE4, 0xEC, 0xFF)), 1.6) { DashStyle = new DashStyle(new double[] { 3, 2 }, 0) });
         static readonly Pen CmpPen = FreezePen(new Pen(new SolidColorBrush(Color.FromArgb(0x99, 0x93, 0xA3, 0xC8)), 1.5) { DashStyle = DashStyles.Dot });
         static readonly Pen GridPen = FreezePen(new Pen(GridBrush, 1));
-        static readonly Pen GlowPen = FreezePen(new Pen(new SolidColorBrush(Color.FromArgb(0x33, 0x6F, 0xB8, 0xFF)), 9) { LineJoin = PenLineJoin.Round, StartLineCap = PenLineCap.Round, EndLineCap = PenLineCap.Round });
+        static readonly Pen GlowPen = FreezePen(new Pen(new SolidColorBrush(Color.FromArgb(0x33, 0x8C, 0xCF, 0xFF)), 9) { LineJoin = PenLineJoin.Round, StartLineCap = PenLineCap.Round, EndLineCap = PenLineCap.Round });
         static readonly Pen HoverPen = FreezePen(new Pen(new SolidColorBrush(Color.FromArgb(0x99, 0xD5, 0xDC, 0xE6)), 1) { DashStyle = DashStyles.Dash });
 
         static Brush Freeze(Brush b) { b.Freeze(); return b; }
@@ -65,7 +65,7 @@ namespace HarleAccel.Controls
             InvalidateVisual();
         }
 
-        static readonly Brush HistBrush = Freeze(new SolidColorBrush(Color.FromArgb(0x38, 0x6F, 0xB8, 0xFF)));
+        static readonly Brush HistBrush = Freeze(new SolidColorBrush(Color.FromArgb(0x38, 0x8C, 0xCF, 0xFF)));
 
         public void SetMessage(string msg)
         {

@@ -57,14 +57,14 @@ namespace HarleAccel.Controls
 
             static BracketAdorner()
             {
-                var holo = Color.FromRgb(0x6F, 0xB8, 0xFF);
+                var holo = Color.FromRgb(0x8C, 0xCF, 0xFF);
                 BracketPen = new Pen(new SolidColorBrush(holo), 2) { StartLineCap = PenLineCap.Square, EndLineCap = PenLineCap.Square };
                 BracketPen.Freeze();
-                GlowPen = new Pen(new SolidColorBrush(Color.FromArgb(0x40, 0x6F, 0xB8, 0xFF)), 6);
+                GlowPen = new Pen(new SolidColorBrush(Color.FromArgb(0x40, 0x8C, 0xCF, 0xFF)), 6);
                 GlowPen.Freeze();
 
                 // linhas de scan: 1px a cada 3px, quase invisível (igual o .scan da FRIDAY)
-                var line = new GeometryDrawing(new SolidColorBrush(Color.FromArgb(0x0B, 0x6F, 0xB8, 0xFF)), null, new RectangleGeometry(new Rect(0, 2, 1, 1)));
+                var line = new GeometryDrawing(new SolidColorBrush(Color.FromArgb(0x0B, 0x8C, 0xCF, 0xFF)), null, new RectangleGeometry(new Rect(0, 2, 1, 1)));
                 var tile = new DrawingBrush(line)
                 {
                     TileMode = TileMode.Tile,

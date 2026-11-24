@@ -77,6 +77,8 @@ namespace HarleAccel
             };
 
             TryLoadLogo();
+            ApplyAppearance();
+            SourceInitialized += (_, _) => Controls.Glass.SetBlur(this, AppState.Current.Settings.GlassBlur);
             StateChanged += (_, _) => RootGrid.Margin = WindowState == WindowState.Maximized ? new Thickness(7) : new Thickness(0);
             AppState.Changed += RefreshDriverBadge;
             Activated += (_, _) => RefreshDriverBadge();
@@ -113,6 +115,18 @@ namespace HarleAccel
                 return;
             }
             await DiscordRpc.ClearAsync();
+        }
+
+        /// <summary>Fundo meio transparente (com o vidro fosco do Windows por trás, se estiver ligado).</summary>
+        public void ApplyAppearance()
+        {
+            var s = AppState.Current.Settings;
+            double op = Math.Clamp(s.WindowOpacity, 0.5, 1.0);
+            var bg = ((Brush)FindResource("Bg")).Clone();
+            bg.Opacity = op;
+            bg.Freeze();
+            RootGrid.Background = bg;
+            if (IsLoaded) Controls.Glass.SetBlur(this, s.GlassBlur && op < 0.999);
         }
 
         /// <summary>Logo: coloque a imagem em Assets/logo.png (a mesma do Harle) e recompile.</summary>

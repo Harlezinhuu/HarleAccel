@@ -7,31 +7,31 @@
 
     <!-- ===== Cores: visual HUD holográfico, o mesmo da F.R.I.D.A.Y ===== -->
     <Color x:Key="BgColor">#03050B</Color>
-    <Color x:Key="PanelColor">#0A1226</Color>
+    <Color x:Key="PanelColor">#0F2045</Color>
     <Color x:Key="CardColor">#B30C1834</Color>
-    <Color x:Key="CardHoverColor">#CC132548</Color>
-    <Color x:Key="BorderColor">#426FB8FF</Color>
-    <Color x:Key="AccentColor">#6FB8FF</Color>
-    <Color x:Key="AccentHiColor">#A9D5FF</Color>
+    <Color x:Key="CardHoverColor">#CC1D3E78</Color>
+    <Color x:Key="BorderColor">#428CCFFF</Color>
+    <Color x:Key="AccentColor">#8CCFFF</Color>
+    <Color x:Key="AccentHiColor">#D2EDFF</Color>
     <Color x:Key="SilverColor">#E4ECFF</Color>
     <Color x:Key="MutedColor">#93A3C8</Color>
 
     <!-- fundo: brilho azul-marinho no centro indo para quase preto (o "véu" da FRIDAY) -->
     <RadialGradientBrush x:Key="Bg" Center="0.55,0.45" GradientOrigin="0.55,0.45" RadiusX="0.85" RadiusY="0.9">
-        <GradientStop Color="#0E1A3A" Offset="0"/>
-        <GradientStop Color="#070C1C" Offset="0.55"/>
-        <GradientStop Color="#03050B" Offset="1"/>
+        <GradientStop Color="#1A3F7A" Offset="0"/>
+        <GradientStop Color="#0F2652" Offset="0.55"/>
+        <GradientStop Color="#081633" Offset="1"/>
     </RadialGradientBrush>
     <SolidColorBrush x:Key="Panel" Color="{StaticResource PanelColor}"/>
     <LinearGradientBrush x:Key="Card" StartPoint="0,0" EndPoint="0,1">
-        <GradientStop Color="#B8101F42" Offset="0"/>
-        <GradientStop Color="#A60A1430" Offset="1"/>
+        <GradientStop Color="#A61C3E7A" Offset="0"/>
+        <GradientStop Color="#94143260" Offset="1"/>
     </LinearGradientBrush>
     <SolidColorBrush x:Key="CardHover" Color="{StaticResource CardHoverColor}"/>
     <SolidColorBrush x:Key="Line" Color="{StaticResource BorderColor}"/>
     <SolidColorBrush x:Key="Accent" Color="{StaticResource AccentColor}"/>
     <SolidColorBrush x:Key="AccentHi" Color="{StaticResource AccentHiColor}"/>
-    <SolidColorBrush x:Key="AccentSoft" Color="#266FB8FF"/>
+    <SolidColorBrush x:Key="AccentSoft" Color="#268CCFFF"/>
     <SolidColorBrush x:Key="Silver" Color="{StaticResource SilverColor}"/>
     <SolidColorBrush x:Key="Muted" Color="{StaticResource MutedColor}"/>
     <SolidColorBrush x:Key="Ok" Color="#5BE3A8"/>
@@ -40,13 +40,13 @@
 
     <!-- botão principal: holograma translúcido com borda acesa -->
     <LinearGradientBrush x:Key="AccentGradient" StartPoint="0,0" EndPoint="0,1">
-        <GradientStop Color="#596FB8FF" Offset="0"/>
-        <GradientStop Color="#336FB8FF" Offset="1"/>
+        <GradientStop Color="#598CCFFF" Offset="0"/>
+        <GradientStop Color="#338CCFFF" Offset="1"/>
     </LinearGradientBrush>
 
     <!-- brilho de holograma (text-shadow da FRIDAY) -->
-    <DropShadowEffect x:Key="Glow" Color="#6FB8FF" BlurRadius="16" ShadowDepth="0" Opacity="0.55"/>
-    <DropShadowEffect x:Key="GlowSoft" Color="#6FB8FF" BlurRadius="10" ShadowDepth="0" Opacity="0.35"/>
+    <DropShadowEffect x:Key="Glow" Color="#8CCFFF" BlurRadius="16" ShadowDepth="0" Opacity="0.55"/>
+    <DropShadowEffect x:Key="GlowSoft" Color="#8CCFFF" BlurRadius="10" ShadowDepth="0" Opacity="0.35"/>
 
     <!-- fontes: trocadas pelas embutidas (Sora, Tektur, JetBrains Mono) ao abrir o app -->
     <FontFamily x:Key="UiFont">Segoe UI</FontFamily>
