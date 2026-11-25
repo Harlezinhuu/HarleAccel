@@ -57,7 +57,6 @@ namespace HarleAccel.Views
             _loading = true;
             var a = CurAxis;
 
-            AxisY.IsEnabled = Work.SeparateY;
             if (!Work.SeparateY) AxisX.IsChecked = true;
             AxisHint.Visibility = Work.SeparateY ? Visibility.Collapsed : Visibility.Visible;
 
@@ -110,7 +109,7 @@ namespace HarleAccel.Views
             RotSlider.Value = Math.Clamp(Work.Rotation, -15, 15);
             SnapSlider.Value = Math.Clamp(Work.SnapDegrees, 0, 45);
             var rep = AppState.Current.LastReport;
-            RecBtn.IsEnabled = rep?.Recommended != null;
+            RecBtn.Content = rep?.Recommended != null ? "Recomendada (Teste de Perfil)" : "Fazer o Teste de Perfil →";
             PresetHint.Text = rep != null
                 ? $"Seu Teste de Perfil deu {rep.Style}. Os estilos prontos são pontos de partida genéricos."
                 : "Pontos de partida genéricos. O Teste de Perfil recomenda uma curva feita para você.";
@@ -152,6 +151,14 @@ namespace HarleAccel.Views
         void Axis_Checked(object sender, RoutedEventArgs e)
         {
             if (_loading || StyleBox == null) return;
+            // clicar em "Vertical" já liga a curva própria do vertical (começa igual à horizontal)
+            if (AxisY.IsChecked == true && !Work.SeparateY)
+            {
+                Work.Y = Work.X.Clone();
+                Work.SeparateY = true;
+                ScheduleSave();
+                Ui.SetStatus(Status, "Vertical separado ligado. Ele começa igual ao horizontal; ajuste à vontade.", true);
+            }
             LoadControls();
         }
 
@@ -264,6 +271,11 @@ namespace HarleAccel.Views
         {
             var st = AppState.Current;
             string tag = (string)((Button)sender).Tag;
+            if (tag == "rec" && st.LastReport?.Recommended == null)
+            {
+                MainWindow.Instance?.Navigate("profile"); // ainda não tem recomendação: leva para o teste
+                return;
+            }
             AccelProfile? p = tag == "rec" ? st.LastReport?.Recommended?.Clone() : StylePreset(tag, st.Dpi);
             if (p == null) return;
             p.Dpi = st.Dpi;

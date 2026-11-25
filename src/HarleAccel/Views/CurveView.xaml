@@ -49,7 +49,7 @@
                             <RadioButton x:Name="AxisY" Style="{StaticResource Pill}" Content="Vertical" GroupName="axis" Checked="Axis_Checked"/>
                         </StackPanel>
                         <TextBlock x:Name="AxisHint" Style="{StaticResource Sub}" FontSize="11" Margin="0,6,0,0"
-                                   Text="Ligue “Vertical com curva própria” lá embaixo para editar o vertical separado."/>
+                                   Text="Clique em Vertical para dar uma curva própria ao vertical."/>
                     </StackPanel>
                 </Border>
 
