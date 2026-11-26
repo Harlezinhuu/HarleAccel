@@ -199,6 +199,17 @@ namespace HarleAccel.Core
                     ["curva_recomendada"] = rep.Recommended?.Describe(),
                 };
             }
+            var recent = st.AimResults.TakeLast(6).ToList();
+            if (recent.Count > 0)
+            {
+                var sum = AimDiagnosis.Sum(recent);
+                o["diagnostico_ultimos_aim_tests"] = new JsonObject
+                {
+                    ["perto_passou_do_alvo"] = sum.NearOver, ["perto_parou_antes"] = sum.NearUnder, ["perto_direto"] = sum.NearDirect,
+                    ["longe_passou_do_alvo"] = sum.FarOver, ["longe_parou_antes"] = sum.FarUnder, ["longe_direto"] = sum.FarDirect,
+                    ["leitura"] = string.Join(" ", AimDiagnosis.Explain(sum, applied != null && !applied.IsNeutral)),
+                };
+            }
             var tests = st.AimResults.Where(r => r.Kind == "teste").TakeLast(5).ToList();
             if (tests.Count > 0)
                 o["ultimos_aim_tests"] = new JsonArray(tests.Select(t => (JsonNode)$"{t.Date:dd/MM} {t.Score:0} pts, {t.Accuracy * 100:0}% precisão, curva: {t.Curve}").ToArray());

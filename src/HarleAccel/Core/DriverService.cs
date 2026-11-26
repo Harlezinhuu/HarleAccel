@@ -328,7 +328,8 @@ namespace HarleAccel.Core
         {
             var st = AppState.Current;
             if (!st.NeutralActive) return;
-            if (st.Applied != null) await ApplyAsync(st.Applied);
+            // volta a curva aplicada; se nunca teve curva, volta para o neutro (sem nenhum multiplicador)
+            await ApplyAsync(st.Applied ?? AccelProfile.Neutral(st.Dpi));
             st.NeutralActive = false;
             AppState.Save();
         }

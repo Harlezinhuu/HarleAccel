@@ -19,6 +19,14 @@ namespace HarleAccel.Core
         public double Seconds { get; set; }
         public double AvgMsPerHit { get; set; }
 
+        // como cada alvo foi atingido (ver AimDiagnosis): perto = microajuste/controle, longe = flick
+        public int NearOver { get; set; }
+        public int NearUnder { get; set; }
+        public int NearDirect { get; set; }
+        public int FarOver { get; set; }
+        public int FarUnder { get; set; }
+        public int FarDirect { get; set; }
+
         public double Accuracy => Hits + Misses == 0 ? 0 : (double)Hits / (Hits + Misses);
 
         /// <summary>Pontuação: acertos por minuto ponderados pela precisão.</summary>

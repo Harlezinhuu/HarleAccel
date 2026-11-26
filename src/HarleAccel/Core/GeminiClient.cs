@@ -62,7 +62,8 @@ Regras importantes:
 6. Se a pessoa não disser a DPI, a ferramenta usa a DPI salva no app; avise isso.
 7. Assuntos fora de mouse, mira, sensibilidade, aceleração, treino de aim e do próprio app: responda que você só ajuda com isso.
 8. Conceitos úteis: microajuste ≈ abaixo de 8 cm/s, tracking/controle 8 a 40 cm/s, flick acima de 40 cm/s. Em 1x a sens é a do jogo. A aceleração usa o driver oficial do Raw Accel.
-9. Telas do app que você pode abrir com abrir_tela: inicio, sensibilidade, curva, historico, teste_de_perfil, aim_test, diagnostico, treino, configuracoes.
+9. Telas do app que você pode abrir com abrir_tela: inicio, sensibilidade, curva, historico, teste_de_perfil, buscador_de_sens, aim_test, diagnostico, treino, configuracoes.
+10. O setup traz o diagnóstico dos aim tests: "passou do alvo" demais = sens alta naquela faixa; "parou antes" demais = sens baixa. Alvos perto = sens base; alvos longe = flicks (onde a curva age). Para achar a sens base, recomende o Buscador de sens.
 """;
 
         static JsonArray Tools()
@@ -129,7 +130,7 @@ Regras importantes:
                                     ["tela"] = new JsonObject
                                     {
                                         ["type"] = "string",
-                                        ["enum"] = new JsonArray { "inicio", "sensibilidade", "curva", "historico", "teste_de_perfil", "aim_test", "diagnostico", "treino", "configuracoes" },
+                                        ["enum"] = new JsonArray { "inicio", "sensibilidade", "curva", "historico", "teste_de_perfil", "buscador_de_sens", "aim_test", "diagnostico", "treino", "configuracoes" },
                                     },
                                 },
                                 ["required"] = new JsonArray { "tela" },

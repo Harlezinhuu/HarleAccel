@@ -31,6 +31,11 @@ namespace HarleAccel.Views
 
         const double Radius = 15;
         Point _center;
+
+        // caminho do mouse até o alvo atual (para o diagnóstico de passou/parou antes)
+        readonly System.Collections.Generic.List<AimDiagnosis.Sample> _path = new();
+        Point _start;
+        readonly AimResult _counts = new();
         int _hits, _misses;
         double _sumHitMs;
         bool _running;
@@ -108,6 +113,13 @@ namespace HarleAccel.Views
             _timer.Tick += OnTick;
             Loaded += (_, _) => { _clock.Start(); _timer.Start(); };
             PreviewMouseLeftButtonDown += OnClick;
+            PreviewMouseMove += (_, e) =>
+            {
+                if (!_running) return;
+                var p = e.GetPosition(_canvas);
+                _path.Add(new AimDiagnosis.Sample(_targetClock.Elapsed.TotalSeconds, p.X, p.Y));
+                if (_path.Count > 4000) _path.RemoveAt(0);
+            };
             KeyDown += (_, e) => { if (e.Key == Key.Escape) { Result = null; Close(); } };
             Closed += (_, _) => _timer.Stop();
         }
@@ -159,6 +171,9 @@ namespace HarleAccel.Views
             Canvas.SetTop(_target, _center.Y - Radius);
             _target.Visibility = Visibility.Visible;
             _targetClock.Restart();
+            _start = IsLoaded ? Mouse.GetPosition(_canvas) : from;
+            _path.Clear();
+            _path.Add(new AimDiagnosis.Sample(0, _start.X, _start.Y));
         }
 
         void OnClick(object sender, MouseButtonEventArgs e)
@@ -169,6 +184,9 @@ namespace HarleAccel.Views
             {
                 _hits++;
                 _sumHitMs += _targetClock.Elapsed.TotalMilliseconds;
+                double dist = (_center - _start).Length;
+                var approach = AimDiagnosis.Classify(_path, _start.X, _start.Y, _center.X, _center.Y, Radius);
+                AimDiagnosis.Count(_counts, approach, dist < AimDiagnosis.NearMaxPx);
                 Spawn(_center);
             }
             else _misses++;
@@ -184,6 +202,8 @@ namespace HarleAccel.Views
                 Misses = _misses,
                 Seconds = _seconds,
                 AvgMsPerHit = _hits > 0 ? _sumHitMs / _hits : 0,
+                NearOver = _counts.NearOver, NearUnder = _counts.NearUnder, NearDirect = _counts.NearDirect,
+                FarOver = _counts.FarOver, FarUnder = _counts.FarUnder, FarDirect = _counts.FarDirect,
             };
             Close();
         }

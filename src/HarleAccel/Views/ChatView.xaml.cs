@@ -35,6 +35,7 @@ namespace HarleAccel.Views
             ["curva"] = ("curve", "Curva"),
             ["historico"] = ("history", "Histórico"),
             ["teste_de_perfil"] = ("profile", "Teste de Perfil"),
+            ["buscador_de_sens"] = ("finder", "Buscador de sens"),
             ["aim_test"] = ("aim", "Aim Test e A/B"),
             ["diagnostico"] = ("tools", "Diagnóstico do mouse"),
             ["treino"] = ("training", "Treino"),

@@ -331,3 +331,92 @@ namespace HarleAccel.Tests
         }
     }
 }
+
+namespace HarleAccel.Tests
+{
+    public class DiagnosticoDeMiraTests
+    {
+        const double R = 15;
+
+        /// <summary>Movimento em linha reta de 0 até "stop" (perfil de velocidade em sino), e depois até "end" devagar.</summary>
+        static List<AimDiagnosis.Sample> Path(double stop, double end, double dist = 300)
+        {
+            var list = new List<AimDiagnosis.Sample>();
+            double t = 0;
+            const int n = 30;
+            for (int i = 0; i <= n; i++)
+            {
+                double x = stop * (1 - Math.Cos(Math.PI * i / n)) / 2; // acelera e freia
+                list.Add(new AimDiagnosis.Sample(t, x, 0));
+                t += 0.008;
+            }
+            // pausa curta e correção lenta (microajuste)
+            for (int i = 1; i <= 15; i++)
+            {
+                t += 0.02;
+                list.Add(new AimDiagnosis.Sample(t, stop + (end - stop) * i / 15.0, 0));
+            }
+            return list;
+        }
+
+        [Fact]
+        public void Caiu_direto_no_alvo() =>
+            Assert.Equal(Approach.Direct, AimDiagnosis.Classify(Path(300, 300), 0, 0, 300, 0, R));
+
+        [Fact]
+        public void Passou_do_alvo_e_voltou() =>
+            Assert.Equal(Approach.Over, AimDiagnosis.Classify(Path(350, 300), 0, 0, 300, 0, R));
+
+        [Fact]
+        public void Parou_antes_e_completou() =>
+            Assert.Equal(Approach.Under, AimDiagnosis.Classify(Path(240, 300), 0, 0, 300, 0, R));
+
+        [Fact]
+        public void Alvo_colado_nao_conta() =>
+            Assert.Equal(Approach.Unknown, AimDiagnosis.Classify(Path(20, 20), 0, 0, 20, 0, R));
+
+        [Fact]
+        public void Julga_sens_alta_baixa_e_equilibrada()
+        {
+            Assert.Equal(AimDiagnosis.Verdict.High, AimDiagnosis.Judge(over: 7, under: 1, direct: 4));
+            Assert.Equal(AimDiagnosis.Verdict.Low, AimDiagnosis.Judge(over: 1, under: 7, direct: 4));
+            Assert.Equal(AimDiagnosis.Verdict.Balanced, AimDiagnosis.Judge(over: 3, under: 3, direct: 6));
+            Assert.Equal(AimDiagnosis.Verdict.NotEnough, AimDiagnosis.Judge(1, 1, 1));
+        }
+
+        [Fact]
+        public void Explicacao_sugere_baixar_a_curva_quando_passa_nos_flicks()
+        {
+            var r = new AimResult { NearDirect = 8, NearOver = 1, NearUnder = 1, FarOver = 7, FarDirect = 2, FarUnder = 1 };
+            var text = string.Join(" ", AimDiagnosis.Explain(r, hasCurve: true));
+            Assert.Contains("sens base parece no ponto", text);
+            Assert.Contains("aceleração está forte demais", text);
+        }
+
+        [Fact]
+        public void Buscador_fecha_o_intervalo_pela_metade()
+        {
+            var f = new SensFinder();
+            Assert.Equal(0.5, f.Low, 9);
+            Assert.Equal(1.5, f.High, 9);
+            f.Choose(+1);                       // escolheu a mais alta
+            Assert.Equal(1.5, f.Center, 9);
+            Assert.Equal(1.5 * 0.75, f.Low, 9); // agora ±25%
+            f.Choose(-1);
+            f.Choose(0);                        // iguais: fica no meio
+            f.Choose(+1);
+            f.Choose(-1);
+            Assert.True(f.Done);
+            var (lo, hi) = f.Range;
+            Assert.True((hi - lo) / f.Center < 0.04); // faixa final de uns ±2%
+        }
+
+        [Fact]
+        public void Buscador_sempre_na_mesma_direcao_nao_explode()
+        {
+            var f = new SensFinder();
+            for (int i = 0; i < SensFinder.Rounds; i++) f.Choose(+1);
+            Assert.InRange(f.Center, 1.5, 4.0);
+        }
+    }
+}

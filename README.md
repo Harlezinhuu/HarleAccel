@@ -20,7 +20,7 @@ Pegue o `HarleAccel.exe` na página de [Releases](https://github.com/Harlezinhuu
 
 O HarleAccel usa o **driver oficial e assinado do [Raw Accel](https://github.com/RawAccelOfficial/rawaccel)**, o mesmo que funciona com Vanguard e FACEIT. Em cima dele, traz uma interface nova e ferramentas que o Raw Accel não tem: um teste que lê como você joga e recomenda a curva, um teste cego A/B, diagnóstico do mouse e treino de adaptação.
 
-## Funcionalidades (v0.5)
+## Funcionalidades (v0.6)
 
 **Visual HUD:** o mesmo estilo holográfico da F.R.I.D.A.Y. Usa azul-holograma sobre azul-marinho, cantoneiras nos painéis, linhas de scan, brilho nos títulos e as fontes Tektur, Sora e JetBrains Mono.
 
@@ -39,6 +39,8 @@ O HarleAccel usa o **driver oficial e assinado do [Raw Accel](https://github.com
 - **Histórico de curvas** e **importar/exportar** o `settings.json` do Raw Accel.
 
 **Descobrir e treinar**
+- **Buscador de sens (PSA, às cegas).** São 5 rodadas comparando uma sens mais baixa com uma mais alta, sem saber qual é qual, até achar a sua faixa (uns ±2%).
+- **Diagnóstico de mira.** O aim test grava o caminho do mouse e diz se você passa do alvo (sens alta) ou para antes (sens baixa), separando movimentos curtos (sens base) de flicks (curva).
 - **Teste de Perfil.** Você joga 2 ou 3 partidas e o app só *lê* o mouse por Raw Input, sem tocar no jogo.
   - No fim ele mostra o seu estilo (Flicker, Tracker ou Híbrido) e o mapa de onde a sua mão passa o tempo.
   - Recomenda uma curva já com o split X/Y e a rotação.

@@ -58,7 +58,7 @@
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
                     <StackPanel>
                         <RadioButton x:Name="NavHome" Style="{StaticResource NavItem}" Content="Início" Checked="Nav_Checked" Tag=""/>
-                        <RadioButton x:Name="NavChat" Style="{StaticResource NavItem}" Content="Harle IA" Checked="Nav_Checked" Tag="NOVO"/>
+                        <RadioButton x:Name="NavChat" Style="{StaticResource NavItem}" Content="Harle IA" Checked="Nav_Checked" Tag=""/>
                         <RadioButton x:Name="NavWizard" Style="{StaticResource NavItem}" Content="Assistente" Checked="Nav_Checked" Tag=""/>
 
                         <TextBlock Text="CONFIGURAR" Style="{StaticResource Label}" Margin="14,14,0,4" FontSize="10"/>
@@ -68,6 +68,7 @@
 
                         <TextBlock Text="DESCOBRIR E TREINAR" Style="{StaticResource Label}" Margin="14,14,0,4" FontSize="10"/>
                         <RadioButton x:Name="NavProfile" Style="{StaticResource NavItem}" Content="Teste de Perfil" Checked="Nav_Checked" Tag=""/>
+                        <RadioButton x:Name="NavFinder" Style="{StaticResource NavItem}" Content="Buscador de sens" Checked="Nav_Checked" Tag="NOVO"/>
                         <RadioButton x:Name="NavAim" Style="{StaticResource NavItem}" Content="Aim Test e A/B" Checked="Nav_Checked" Tag=""/>
                         <RadioButton x:Name="NavTools" Style="{StaticResource NavItem}" Content="Diagnóstico do mouse" Checked="Nav_Checked" Tag=""/>
                         <RadioButton x:Name="NavTraining" Style="{StaticResource NavItem}" Content="Treino" Checked="Nav_Checked" Tag=""/>

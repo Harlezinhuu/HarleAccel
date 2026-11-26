@@ -162,7 +162,18 @@ namespace HarleAccel.Views
                 numbers +
                 (choice != 0 && better != 0 && choice != better
                     ? "\nSua sensação e os números discordaram. Isso é normal com curva nova: a mão ainda não acostumou. Vale repetir daqui a uns dias de treino."
-                    : "");
+                    : "") +
+                Miss("①", _one) + Miss("②", _two);
+        }
+
+        /// <summary>Resumo de "passou do alvo / parou antes" de uma curva no A/B.</summary>
+        static string Miss(string label, List<AimResult> runs)
+        {
+            var sum = AimDiagnosis.Sum(runs);
+            int n = sum.NearOver + sum.NearUnder + sum.NearDirect + sum.FarOver + sum.FarUnder + sum.FarDirect;
+            if (n < 5) return "";
+            int over = sum.NearOver + sum.FarOver, under = sum.NearUnder + sum.FarUnder;
+            return $"\nCurva {label}: passou do alvo em {100.0 * over / n:0}% e parou antes em {100.0 * under / n:0}% das vezes.";
         }
 
         async void KeepA_Click(object sender, RoutedEventArgs e)
@@ -205,6 +216,8 @@ namespace HarleAccel.Views
             AppState.Current.AddAim(w.Result);
             AppState.Save();
             Ui.SetStatus(SingleStatus, $"{w.Result.Score:0} pts · {w.Result.Hits} acertos · {w.Result.Accuracy * 100:0}% de precisão · {w.Result.AvgMsPerHit:0} ms por alvo", true);
+            DiagText.Text = string.Join("\n", AimDiagnosis.Explain(w.Result, !cur.IsNeutral));
+            DiagCard.Visibility = Visibility.Visible;
             BuildResults();
         }
 
