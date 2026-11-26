@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -94,6 +95,7 @@ namespace HarleAccel
                 if (AppState.Current.NeutralActive) await DriverService.EndNeutralAsync();
 
                 AutoStart.Sync(); // mantém a reaplicação no login (e atualiza o caminho se o .exe mudou de lugar)
+                StartGameWatch(); // mostra no Discord o jogo aberto junto com o status
 
                 await TrainingLibrary.LoadAsync();
 
@@ -162,6 +164,34 @@ namespace HarleAccel
 
         // ------------------------------------------------------------------ Discord
 
+        string? _game;          // jogo aberto agora (null = nenhum)
+        long _gameStart;
+        readonly System.Windows.Threading.DispatcherTimer _gameTimer = new() { Interval = TimeSpan.FromSeconds(10) };
+        bool _gameChecking;
+
+        void StartGameWatch()
+        {
+            _gameTimer.Tick += async (_, _) => await CheckGameAsync();
+            _gameTimer.Start();
+            _ = CheckGameAsync();
+        }
+
+        async Task CheckGameAsync()
+        {
+            if (_gameChecking || !AppState.Current.Settings.DiscordEnabled) return;
+            _gameChecking = true;
+            try
+            {
+                var game = await Task.Run(GameDetector.Current);
+                if (game == _game) return;
+                _game = game;
+                _gameStart = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                UpdatePresence();
+            }
+            catch { }
+            finally { _gameChecking = false; }
+        }
+
         public void UpdatePresence(string? overrideDetails = null)
         {
             var st = AppState.Current;
@@ -171,6 +201,14 @@ namespace HarleAccel
                 ? "Sem aceleração"
                 : "Curva: " + st.Applied.X.Describe();
             if (state.Length > 120) state = state[..120];
+
+            if (_game != null)
+            {
+                // jogando: o jogo vai em cima (e na lista de membros); a tela do app não importa
+                string? extra = overrideDetails ?? (ProfileTestView.Recording ? "Fazendo o Teste de Perfil" : null);
+                _ = DiscordRpc.SetAsync(_game, extra != null ? $"{extra} · {state}" : state, _gameStart);
+                return;
+            }
             _ = DiscordRpc.SetAsync(details, state);
         }
 

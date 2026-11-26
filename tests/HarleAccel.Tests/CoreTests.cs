@@ -420,3 +420,17 @@ namespace HarleAccel.Tests
         }
     }
 }
+
+namespace HarleAccel.Tests
+{
+    public class DeteccaoDeJogoTests
+    {
+        [Fact]
+        public void Acha_o_jogo_pelo_processo() =>
+            Assert.Equal("Valorant", GameDetector.Match(new[] { "explorer", "Discord", "VALORANT-Win64-Shipping" }));
+
+        [Fact]
+        public void Sem_jogo_aberto_retorna_null() =>
+            Assert.Null(GameDetector.Match(new[] { "explorer", "chrome", "Discord" }));
+    }
+}

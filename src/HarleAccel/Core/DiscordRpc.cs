@@ -22,11 +22,16 @@ namespace HarleAccel.Core
         static readonly SemaphoreSlim Lock = new(1, 1);
         static readonly long StartUnix = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
         static string? _lastDetails, _lastState;
+        static long _lastStart;
 
         public static bool Connected => _pipe?.IsConnected == true;
 
-        /// <summary>Atualiza o status. Falhas são silenciosas (Discord fechado, ID errado...).</summary>
-        public static async Task SetAsync(string details, string state)
+        /// <summary>
+        /// Atualiza o status. Falhas são silenciosas (Discord fechado, ID errado...).
+        /// Com <paramref name="gameStart"/>, o tempo conta a partir do jogo e a lista de membros
+        /// mostra a linha de cima (o nome do jogo) em vez de "HarleAccel".
+        /// </summary>
+        public static async Task SetAsync(string details, string state, long? gameStart = null)
         {
             var s = AppState.Current.Settings;
             if (!s.DiscordEnabled || string.IsNullOrWhiteSpace(s.DiscordClientId))
@@ -34,12 +39,27 @@ namespace HarleAccel.Core
                 await ClearAsync();
                 return;
             }
-            if (details == _lastDetails && state == _lastState && Connected) return;
+            long start = gameStart ?? StartUnix;
+            if (details == _lastDetails && state == _lastState && start == _lastStart && Connected) return;
 
             await Lock.WaitAsync();
             try
             {
                 if (!Connected && !await ConnectAsync(s.DiscordClientId.Trim())) return;
+
+                var activity = new JsonObject
+                {
+                    ["details"] = details,
+                    ["state"] = state,
+                    ["timestamps"] = new JsonObject { ["start"] = start },
+                    ["assets"] = new JsonObject
+                    {
+                        ["large_image"] = "logo",
+                        ["large_text"] = "HarleAccel · Criado por Harle",
+                    },
+                };
+                // 2 = a lista de membros mostra o "details" (o jogo). Discord antigo ignora e mostra o nome do app.
+                if (gameStart != null) activity["status_display_type"] = 2;
 
                 var payload = new JsonObject
                 {
@@ -48,23 +68,14 @@ namespace HarleAccel.Core
                     ["args"] = new JsonObject
                     {
                         ["pid"] = Environment.ProcessId,
-                        ["activity"] = new JsonObject
-                        {
-                            ["details"] = details,
-                            ["state"] = state,
-                            ["timestamps"] = new JsonObject { ["start"] = StartUnix },
-                            ["assets"] = new JsonObject
-                            {
-                                ["large_image"] = "logo",
-                                ["large_text"] = "HarleAccel · Criado por Harle",
-                            },
-                        },
+                        ["activity"] = activity,
                     },
                 };
                 await WriteFrameAsync(1, payload.ToJsonString());
                 await ReadFrameAsync(); // lê a resposta para o pipe não encher
                 _lastDetails = details;
                 _lastState = state;
+                _lastStart = start;
             }
             catch
             {
